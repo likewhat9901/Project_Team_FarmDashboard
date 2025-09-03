@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>식물 예측 그래프</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    select {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    canvas {
+      max-width: 700px;
+      max-height: 350px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>작물 선택</h1>
+
+  <select id="plantSelect">
+    <option value="">-- 작물 선택 --</option>
+    {% for plant_name in plants.indoor.keys() %}
+      <option value="indoor|{{ plant_name }}">{{ plant_name }} (실내)</option>
+    {% endfor %}
+    {% for plant_name in plants.outdoor.keys() %}
+      <option value="outdoor|{{ plant_name }}">{{ plant_name }} (실외)</option>
+    {% endfor %}
+  </select>
+
+  <canvas id="plantChart" width="700" height="350"></canvas>
+
+  <script>
+    // Flask에서 받은 데이터 (실내/실외)
+    const indoorData = {
+      {% for plant_name, records in plants.indoor.items() %}
+      "{{ plant_name }}": {
+        dates: {{ records | map(attribute='date') | list | tojson }},
+        height: {{ records | map(attribute='height') | list | tojson }}
+      },
+      {% endfor %}
+    };
+
+    const outdoorData = {
+      {% for plant_name, records in plants.outdoor.items() %}
+      "{{ plant_name }}": {
+        dates: {{ records | map(attribute='date') | list | tojson }},
+        height: {{ records | map(attribute='height') | list | tojson }},
+        fruitnum: {{ records | map(attribute='fruitnum') | list | tojson }}
+      },
+      {% endfor %}
+    };
+
+    const PREDICTION_COUNT = 1;
+
+    const starPointStyle = {
+      pointStyle: 'star',
+      pointRadius: 8,
+      pointHoverRadius: 10
+    };
+
+    const ctx = document.getElementById('plantChart').getContext('2d');
+
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: []
+      },
+      options: {
+        responsive: true,
+        interaction: { mode: 'nearest', intersect: false },
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: '높이 (mm)'
+            }
+          },
+          y1: {
+            type: 'linear',
+            display: true,
+            position: 'right',
+            beginAtZero: true,
+            grid: { drawOnChartArea: false },
+            title: {
+              display: true,
+              text: '열매 개수'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: '주차'
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          }
+        }
+      }
+    });
+
+    document.getElementById('plantSelect').addEventListener('change', e => {
+      const val = e.target.value;
+
+      if (!val) {
+        chart.data.labels = [];
+        chart.data.datasets = [];
+        chart.update();
+        return;
+      }
+
+      const [type, plant] = val.split('|');
+
+      if (type === 'indoor' && indoorData[plant]) {
+        const data = indoorData[plant];
+        const totalLength = data.dates.length;
+        const actualLength = totalLength - PREDICTION_COUNT;
+
+        const actualDates = data.dates.slice(0, actualLength);
+        const predictionDates = data.dates.slice(actualLength);
+        const actualHeight = data.height.slice(0, actualLength);
+        const predictionHeight = data.height.slice(actualLength);
+
+        const allDates = data.dates;
+
+        const actualHeightData = [...actualHeight, ...Array(PREDICTION_COUNT).fill(null)];
+        const predictedHeightData = [...Array(actualLength).fill(null), ...predictionHeight];
+
+        chart.data.labels = allDates;
+        chart.data.datasets = [
+          {
+            label: `${plant} 높이 (실제)`,
+            data: actualHeightData,
+            borderColor: 'blue',
+            backgroundColor: 'rgba(0, 0, 255, 0.2)',
+            fill: true,
+            yAxisID: 'y',
+            pointStyle: 'circle',
+            pointRadius: 4
+          },
+          {
+            label: `${plant} 높이 (예측)`,
+            data: predictedHeightData,
+            borderColor: 'lightblue',
+            backgroundColor: 'rgba(173, 216, 230, 0.3)',
+            borderDash: [5, 5],
+            fill: true,
+            yAxisID: 'y',
+            ...starPointStyle
+          }
+        ];
+      } else if (type === 'outdoor' && outdoorData[plant]) {
+        const data = outdoorData[plant];
+        const totalLength = data.dates.length;
+        const actualLength = totalLength - PREDICTION_COUNT;
+
+        const actualDates = data.dates.slice(0, actualLength);
+        const predictionDates = data.dates.slice(actualLength);
+        const actualHeight = data.height.slice(0, actualLength);
+        const predictionHeight = data.height.slice(actualLength);
+        const actualFruit = data.fruitnum.slice(0, actualLength);
+        const predictionFruit = data.fruitnum.slice(actualLength);
+
+        const allDates = data.dates;
+
+        const actualHeightData = [...actualHeight, ...Array(PREDICTION_COUNT).fill(null)];
+        const predictedHeightData = [...Array(actualLength).fill(null), ...predictionHeight];
+        const actualFruitData = [...actualFruit, ...Array(PREDICTION_COUNT).fill(null)];
+        const predictedFruitData = [...Array(actualLength).fill(null), ...predictionFruit];
+
+        chart.data.labels = allDates;
+        chart.data.datasets = [
+          {
+            label: `${plant} 높이 (실제)`,
+            data: actualHeightData,
+            borderColor: 'green',
+            backgroundColor: 'rgba(0, 128, 0, 0.2)',
+            fill: true,
+            yAxisID: 'y',
+            pointStyle: 'circle',
+            pointRadius: 4
+          },
+          {
+            label: `${plant} 높이 (예측)`,
+            data: predictedHeightData,
+            borderColor: 'lightgreen',
+            backgroundColor: 'rgba(144, 238, 144, 0.3)',
+            borderDash: [5, 5],
+            fill: true,
+            yAxisID: 'y',
+            ...starPointStyle
+          },
+          {
+            label: `${plant} 열매 개수 (실제)`,
+            data: actualFruitData,
+            borderColor: 'red',
+            backgroundColor: 'rgba(255, 0, 0, 0.2)',
+            fill: true,
+            yAxisID: 'y1',
+            pointStyle: 'circle',
+            pointRadius: 4
+          },
+          {
+            label: `${plant} 열매 개수 (예측)`,
+            data: predictedFruitData,
+            borderColor: 'pink',
+            backgroundColor: 'rgba(255, 192, 203, 0.3)',
+            borderDash: [5, 5],
+            fill: false,
+            yAxisID: 'y1',
+            ...starPointStyle
+          }
+        ];
+      } else {
+        chart.data.labels = [];
+        chart.data.datasets = [];
+      }
+
+      chart.update();
+    });
+  </script>
+
+</body>
+</html>

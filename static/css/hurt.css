@@ -1,0 +1,253 @@
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'GmarketSansMedium', sans-serif;
+  background: #f9f9f4;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 220px;
+  background: linear-gradient(135deg, #81c784 0%, #a5d6a7 30%, #c8e6c9 70%, #81c784 100%);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px;
+  height: calc(100vh - 40px);
+  box-shadow: 0 15px 35px rgba(76, 175, 80, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  background: white;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  width: 90px;
+  height: 90px;
+  background: url('../images/사이트로고1.png') no-repeat center center;
+  background-size: 140%;
+}
+
+.nav-menu {
+  list-style: none;
+  flex-grow: 1;
+}
+
+.nav-item {
+  margin-bottom: 8px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.nav-link.active {
+  background: rgba(255,255,255,0.5);
+  color: #333;
+}
+
+.nav-link:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.nav-icon {
+  margin-right: 12px;
+  font-size: 16px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.fruit-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.fruit-btn {
+  border: none;
+  color: white;
+  padding: 14px 75px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.2s ease;
+}
+
+.tangerine-btn {
+  background: linear-gradient(135deg, #ffe0b2, #fb8c00);
+}
+.tangerine-btn:hover {
+  background: linear-gradient(135deg, #ffcc80, #f57c00);
+}
+.tangerine-btn.selected {
+  background: linear-gradient(135deg, #ffcc80, #fb8c00);
+}
+
+.strawberry-btn {
+  background: linear-gradient(135deg, #ef9a9a, #c62828);
+}
+.strawberry-btn:hover {
+  background: linear-gradient(135deg, #ef5350, #b71c1c);
+}
+.strawberry-btn.selected {
+  background: linear-gradient(135deg, #ef5350, #b71c1c);
+}
+
+.lemon-btn {
+  background: linear-gradient(135deg, #fff9c4, #fdd835);
+  color: #333;
+}
+.lemon-btn:hover {
+  background: linear-gradient(135deg, #fff59d, #fbc02d);
+}
+.lemon-btn.selected {
+  background: linear-gradient(135deg, #fff59d, #fbc02d);
+  color: #333;
+}
+
+.melon-btn {
+  background: linear-gradient(135deg, #e6ee9c, #9ccc65);
+  color: #333;
+}
+.melon-btn:hover {
+  background: linear-gradient(135deg, #dce775, #8bc34a);
+}
+.melon-btn.selected {
+  background: linear-gradient(135deg, #dce775, #9ccc65);
+  color: #333;
+}
+
+.detector-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.box {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  width: 600px;
+  height: 600px;
+  min-height: 450px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.box h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #388e3c;
+}
+
+
+.preview {
+  width: 100%;
+  height: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.result-text {
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.result {
+  font-size: 15px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.disease-name {
+  color: #d32f2f;
+}
+
+.upload-area {
+  display: block;
+  position: relative;
+  width: 500px;
+  height: 400px;
+  padding: 80px 20px;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  background: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  border-color: #029b28; 
+}
+
+.upload-area:hover {
+  border-color: #07f141;  
+}
+
+.upload-area .upload-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px auto;
+  background: url('../images/업로드2.png') no-repeat center center;
+  background-size: contain;
+}
+
+.upload-area span {
+  font-size: 14px;
+  color: #068a69;
+}
+
+.upload-area input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}

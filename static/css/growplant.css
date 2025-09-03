@@ -1,0 +1,171 @@
+/* Gmarket Sans 폰트 */
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 전체 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'GmarketSansMedium', sans-serif;
+  background: #f9f9f4;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Sidebar (기존 ui_jk.css 동일) */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(135deg, #81c784 0%, #a5d6a7 30%, #c8e6c9 70%, #81c784 100%);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px;
+  height: calc(100vh - 40px);
+  box-shadow: 0 15px 35px rgba(76,175,80,0.3), 0 5px 15px rgba(76,175,80,0.2);
+}
+
+.logo {
+  background: white;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.logo-icon {
+  width: 90px;
+  height: 90px;
+  background: url('../images/사이트로고1.png') no-repeat center center;
+  background-size: 140%;
+}
+
+.nav-menu {
+  list-style: none;
+}
+.nav-item {
+  margin-bottom: 8px;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.nav-link:hover {
+  background: rgba(255,255,255,0.3);
+}
+.nav-link.active {
+  background: rgba(255,255,255,0.5);
+  color: #333;
+}
+.nav-icon {
+  margin-right: 12px;
+  font-size: 16px;
+}
+
+/* 메인 콘텐츠 */
+.main-content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* 페이지 헤더 */
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.page-title .nav-icon img {
+  width: 26px;
+  height: 26px;
+}
+
+/* 예측 컨테이너 */
+.predict-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* 컨트롤 영역 */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 220px;
+}
+
+/* 컨트롤 제목 */
+.controls h2 {
+  font-size: 18px;
+  color: #2e7d32;
+}
+
+/* 드롭다운 */
+#plantSelect {
+  font-size: 16px;
+  padding: 8px 12px;
+  border: 1px solid #a5d6a7;
+  border-radius: 5px;
+  background-color: white;
+  color: #388e3c;
+  cursor: pointer;
+  transition: border 0.2s, box-shadow 0.2s;
+  min-width: 200px;
+}
+
+#plantSelect:hover {
+  border-color: #81c784;
+  box-shadow: 0 0 4px rgba(129,199,132,0.5);
+}
+
+/* 차트 wrapper */
+.chart-wrapper {
+  display: grid;                     /* Grid 컨테이너 선언 */
+  place-items: center;               /* 가로+세로 모두 중앙 정렬 */
+  flex: 1;
+  width:100px;
+  height: 150px;
+  background: white;
+  border: 1px solid #c8e6c9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 15px;
+}
+
+
+.predict-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.chart-wrapper {
+  width: 100%;
+}
+

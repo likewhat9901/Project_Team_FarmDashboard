@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <link rel="stylesheet" href="../static/css/ui_jk.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <div class="logo-icon"></div>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="/dashboard" class="nav-link">
+                    <span class="nav-icon">🏠</span>
+                    대쉬보드
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/education" class="nav-link">
+                    <span class="nav-icon">🏫</span>
+                    농업교육기관
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/flowershop" class="nav-link">
+                    <span class="nav-icon">🌼</span>
+                    꽃집 지도
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/growplant" class="nav-link">
+                    <span class="nav-icon">
+                        <img src="/static/images/growplant.png." alt="식물 성장 아이콘" style="width:21px; height:21px; vertical-align:middle;">
+                    </span>
+                    식물 성장 예측
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/hurt" class="nav-link">
+                    <span class="nav-icon">🚑</span>
+                     식물 병명 진단
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <h1 class="page-title">Thousand haniho</h1>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="weather-card">
+                <div class="weather-header">
+                    <div class="weather-title">현재 날씨</div>
+                </div>
+
+                <div class="metric-cards">
+                    <div class="metric-card main">
+                    </div>
+                    <div class="metric-card two">
+                        <h3>기온🌡️</h3>
+                        <p>{{ weather_dict.temp_value }} °C</p>
+                    </div>
+                    <div class="metric-card blue">
+                        <h3>습도💧</h3>
+                        <p>{{ weather_dict.humi_value }} %</p>
+                    </div>
+                    <div class="metric-card orange">
+                        <h3>1시간 강수량🌧️</h3>
+                        <p>{{ weather_dict.rain_value }} mm</p>
+                    </div>
+                    <div class="metric-card pink">
+                        <h3>풍속💨</h3>
+                        <p>{{ weather_dict.wind_value }} m/s</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 여기에 파이차트 -->
+           <div class="empty-card">
+                <div class="empty-card-header">
+                    <h3>식물 종류별 실시간 검색 비율</h3>
+    
+                    <!-- 식물 종류 선택 박스 -->
+                    <select id="plantSelect" aria-label="식물 종류 선택">
+                        <option value="1" selected>텃밭식물</option>
+                        <option value="2">관엽식물</option>
+                    </select>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="map-card">
+                <h3>농업 교육기관 지도 🗺️</h3>
+                <div id="map" style="width:100%; height:370px; border-radius:8px;"></div>
+            </div>
+
+            <div class="chart-card">
+                <div class="chart-card-header">
+                    <h3>작물별 환경 평균 그래프 🌾</h3>
+                    <div id="regionSelector" style="margin-bottom:10px;">
+                        <label for="region">지역 선택</label>
+                        <select id="region">
+                            <option value="서울">서울</option>
+                            <option value="부산">부산</option>
+                            <option value="대구">대구</option>
+                            <option value="광주">광주</option>
+                            <option value="인천">인천</option>
+                            <option value="대전">대전</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="cropFilter" style="margin-bottom:10px;"></div>
+
+                <canvas id="barChart"></canvas>
+            </div>
+
+            <div class="ranking-card">
+                <div class="ranking-header">
+                    <h2>가격 데이터 💰</h2>
+                    <div class="ranking-options">
+                        
+                        <select id="crop-select" style="display:none;"></select>
+                        <select id="ranking-category-select" style="font-weight: bold;">
+                            <option value="100">식량작물</option>
+                            <option value="200">채소류</option>
+                            <option value="300">특용작물</option>
+                            <option value="400">과일류</option>
+                            <option value="600">수산물</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ranking-table-wrapper">
+                    <table class="ranking-table">
+                        <thead>
+                            <tr>
+                                <th data-column="rank">번호</th>
+                                <th data-column="name">작물명</th>
+                                <th data-column="price">소매가격</th>
+                                <th data-column="change">등락률</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="chart-wrapper" style="display:none;">
+                    <canvas id="price-chart"></canvas>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    
+    <!-- 네비게이션 메뉴 -->
+    <script>
+        // 모든 nav-link 요소 선택
+        const navLinks = document.querySelectorAll('.nav-link');
+        // 현재 URL 경로 얻기
+        const currentPath = window.location.pathname;
+
+        navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+
+        // href가 # 이거나 빈 값이면 비교하지 않음
+        if (!href || href === '#') return;
+
+        const linkPath = new URL(href, window.location.origin).pathname;
+
+        if (linkPath === currentPath) {
+            link.classList.add('active');
+        }
+        });
+    </script>
+
+    <!-- 작물별 환경 평균 그래프 -->
+    <script>
+        // 👉 Flask 템플릿 데이터 가져오기
+        const labels = {{ compare_dict.labels | tojson }};
+        const tempData = {{ compare_dict.temp | tojson }};
+        const humidData = {{ compare_dict.humid | tojson }};
+        const solarData = {{ compare_dict.solar | tojson }};
+
+        let selectedRegion = "서울";          // 현재 선택된 지역
+        let lastSelectedCropIndex = null;     // 마지막으로 선택된 작물 인덱스
+
+        // 👉 Chart.js 차트 생성
+        const ctx = document.getElementById('barChart').getContext('2d');
+        const barChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: '온도_내부 (°C)',
+                        backgroundColor: '#AED581',
+                        data: tempData
+                    },
+                    {
+                        label: '상대습도_내부 (%)',
+                        backgroundColor: '#4DB6AC',
+                        data: humidData
+                    },
+                    {
+                        label: '일사량_외부 (W/m²)',
+                        backgroundColor: '#DCE775',
+                        data: solarData
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                aspectRatio: 3,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        align: 'end'
+                    }
+                },
+                layout: {
+                    padding: {
+                        top: 20,
+                        right: 30,
+                        bottom: 10,
+                        left: 10
+                    }
+                }
+            }
+        });
+
+        // 👉 지역 선택 이벤트
+        const regionSelector = document.getElementById("region");
+        regionSelector.addEventListener("change", () => {
+            selectedRegion = regionSelector.value;
+            // 마지막에 선택된 작물이 있으면 다시 필터링
+            if (lastSelectedCropIndex !== null) {
+                filterChartByCrop(lastSelectedCropIndex);
+            }
+        });
+
+        // 👉 필터 버튼 컨테이너
+        const filterContainer = document.getElementById('cropFilter');
+
+        // 👉 버튼 생성 유틸 함수
+        function createButton(label, onClick) {
+            const btn = document.createElement('button');
+            btn.textContent = label;
+            btn.className = 'crop-button';  // 공통 클래스 지정
+            btn.addEventListener('click', onClick);
+            return btn;
+        }
+
+        // 👉 "전체 보기" 버튼
+        const allButton = createButton('전체 보기', () => {
+            barChart.data.labels = labels;
+            barChart.data.datasets[0].data = tempData;
+            barChart.data.datasets[1].data = humidData;
+            barChart.data.datasets[2].data = solarData;
+            barChart.update();
+            lastSelectedCropIndex = null;  // 전체 보기로 초기화
+        });
+        filterContainer.appendChild(allButton);
+
+        // 👉 작물별 버튼 생성
+        labels.forEach((crop, index) => {
+            const cropButton = createButton(crop, () => filterChartByCrop(index));
+            filterContainer.appendChild(cropButton);
+        });
+
+        // 👉 작물 필터링 함수
+        function filterChartByCrop(cropIndex) {
+            lastSelectedCropIndex = cropIndex;
+
+            const cropLabel = labels[cropIndex];
+            const cropTemp = tempData[cropIndex];
+            const cropHumid = humidData[cropIndex];
+            const cropSolar = solarData[cropIndex];
+
+            // 두 API 동시에 호출
+            Promise.all([
+                fetch(`/api/weather?region=${selectedRegion}`).then(res => res.json()),
+                fetch(`/api/solar?region=${selectedRegion}`).then(res => res.json())
+            ])
+            .then(([weather, solar]) => {
+                // API 응답값 파싱
+                const realTemp = parseFloat(weather.temp_value);
+                const realHumid = parseFloat(weather.humi_value);
+                const realSolar = parseFloat(solar.solar_value);
+
+                // 차트 데이터 업데이트
+                barChart.data.labels = [cropLabel, `${selectedRegion} 실시간`];
+                barChart.data.datasets[0].data = [cropTemp, realTemp];
+                barChart.data.datasets[1].data = [cropHumid, realHumid];
+                barChart.data.datasets[2].data = [cropSolar, realSolar];
+                barChart.update();
+            })
+            .catch(error => console.error("데이터 가져오기 실패:", error));
+        }
+
+        // 👉 창 크기 변경 시 차트 리사이즈
+        window.addEventListener('resize', () => barChart.resize());
+    </script>
+
+    <!-- 가격 테이블 -->
+    <script>
+        // 테이블 헤더 오름차순, 내림차순 정렬
+        document.querySelectorAll(".ranking-table th").forEach(th => {
+            th.dataset.order = "asc"; // 기본은 오름차순
+
+            th.addEventListener("click", () => {
+                const table = th.closest("table");
+                const tbody = table.querySelector("tbody");
+                const rows = Array.from(tbody.querySelectorAll("tr"));
+                const index = Array.from(th.parentNode.children).indexOf(th);
+                const isNumeric = index !== 1; // 숫자로 비교할지 여부 (번호, 소매가격, 등락률 = 숫자)
+
+                // 현재 상태 가져오기
+                const currentOrder = th.dataset.order;
+                const newOrder = currentOrder === "asc" ? "desc" : "asc";
+                th.dataset.order = newOrder;
+
+                // ▼▲ 아이콘 표시 초기화
+                th.parentNode.querySelectorAll("th").forEach(otherTh => {
+                    if (otherTh !== th) {
+                        otherTh.textContent = otherTh.textContent.replace(/[\u25B2\u25BC]/g, "");
+                        otherTh.dataset.order = "asc";
+                    }
+                });
+
+                // 아이콘 표시 
+                const arrow = newOrder === "asc" ? " ▼" : " ▲";
+                th.textContent = th.textContent.replace(/[\u25B2\u25BC]/g, "") + arrow;
+
+                const sortedRows = rows.sort((a, b) => {
+                    const aText = a.children[index].textContent.trim().replace(/[%(),]/g, "");
+                    const bText = b.children[index].textContent.trim().replace(/[%(),]/g, "");
+
+                    if (isNumeric) {
+                        const aNum = parseFloat(aText);
+                        const bNum = parseFloat(bText);
+                        return newOrder === "asc" ? aNum - bNum : bNum - aNum;
+                    } else {
+                        return newOrder === "asc"
+                            ? aText.localeCompare(bText)
+                            : bText.localeCompare(aText);
+                    }
+                });
+
+                // tbody 정렬 반영
+                tbody.innerHTML = "";
+                sortedRows.forEach(row => tbody.appendChild(row));
+            });
+        });
+
+        // select 이벤트 리스너 달기
+        const categoryCache = {};
+        document.getElementById("ranking-category-select").addEventListener("change", function() {
+            const categoryCode = this.value; // 선택된 값
+            console.log("categoryCode:", categoryCode);  // 여기 찍기
+
+            if (categoryCache[categoryCode]) {
+                console.log("클라이언트 캐시 사용");
+                renderTable(categoryCache[categoryCode]);
+                return;
+            }
+
+            fetch("/api/get_ranking_data", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ category_code: categoryCode })
+            })
+            .then(response => response.json())
+            .then(data => {
+                categoryCache[categoryCode] = data;
+                renderTable(data);
+            });
+        });
+
+        function renderTable(data) {
+            const tbody = document.querySelector(".ranking-table tbody");
+            tbody.innerHTML = "";
+            data.forEach((row, i) => {
+                const price = Number(row.price.replace(/,/g, ""));
+                const weekprice = Number(row.weekprice.replace(/,/g, ""));
+
+                let change = "";
+                if (price && weekprice) {
+                    change = ((price / weekprice - 1) * 100).toFixed(1) + "%";
+                } else {
+                    change = "-";
+                }
+
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td>${i + 1}</td>
+                    <td>${row.itemname} (${row.unit})</td>
+                    <td>${row.price}원</td>
+                    <td>${change}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // 페이지 로드시 change 이벤트를 강제 발생
+        document.getElementById("ranking-category-select").dispatchEvent(new Event("change"));
+
+
+        const showChartBtn = document.getElementById("show-chart-btn");
+        const categorySelect = document.getElementById("ranking-category-select");
+        const cropSelect = document.getElementById("crop-select");
+        const rankingHeader = document.querySelector(".ranking-header");
+
+        const tableWrapper = document.querySelector(".ranking-table-wrapper");
+        const chartWrapper = document.getElementById("chart-wrapper");
+
+        // 차트에 쓸 작물 목록 예시
+        const cropNames = ["쌀", "찹쌀", "콩", "감자", "고구마"];
+
+        let isChartVisible = false;
+
+        // 최초에 옵션 채우기
+        cropNames.forEach(name => {
+            const option = document.createElement("option");
+            option.value = name;
+            option.textContent = name;
+            cropSelect.appendChild(option);
+        });
+
+        showChartBtn.addEventListener("click", () => {
+            if (!isChartVisible) {
+                // 표 숨기고 차트 보이게
+                tableWrapper.style.display = "none";
+                chartWrapper.style.display = "block";
+                cropSelect.style.display = "block";
+
+                // 버튼 텍스트 바꾸기
+                showChartBtn.textContent = "데이터 보기";
+                isChartVisible = true;
+            } else {
+                // 차트 숨기고 표 보이게
+                chartWrapper.style.display = "none";
+                tableWrapper.style.display = "block";
+                cropSelect.style.display = "none";
+
+                // 버튼 텍스트 복구
+                showChartBtn.textContent = "차트 보기";
+                isChartVisible = false;
+            }
+        });
+
+
+
+        let priceChartInstance = null;
+        function loadChart() {
+    
+            const cropCode = cropSelect.value;
+            const categoryCode = categorySelect.value;
+
+            fetch("/api/get_ranking_data", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ category_code: categoryCode, itemname: cropCode })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("서버에서 받은 데이터:", data);
+
+                if (!data || data.length === 0) {
+                    alert("데이터가 없습니다.");
+                    return;
+                }
+
+                const selected = data[0]; // itemname으로 필터링했으니 1개만 올 것
+
+                // 이전 차트 제거
+                if (priceChartInstance) {
+                    priceChartInstance.destroy();
+                }
+
+                const ctx = document.getElementById("price-chart").getContext("2d");
+                priceChartInstance = new Chart(ctx, {
+                    type: "line",
+                    data: {
+                        labels: ["1년전", "1개월전", "1주전", "현재"],
+                        datasets: [{
+                            label: `${selected.itemname} 가격`,
+                            data: [
+                                Number(selected.yearprice),
+                                Number(selected.monthprice),
+                                Number(selected.weekprice),
+                                Number(selected.price)
+                            ],
+                            borderColor: "rgba(75, 192, 192, 1)",
+                            backgroundColor: "rgba(75, 192, 192, 0.2)",
+                            fill: true
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: { beginAtZero: false }
+                        }
+                    }
+                });
+            })
+            .catch(error => {
+                console.error("데이터 요청 오류:", error);
+                alert("데이터를 가져오는 중 오류가 발생했습니다.");
+            });
+        }
+
+        document.getElementById("show-chart-btn").addEventListener("click", loadChart);
+        cropSelect.addEventListener("change", loadChart);
+
+
+    </script>
+    
+    <script>
+        // dashboard에 지도 추가
+        var map = L.map('map').setView([37.47, 126.88], 7);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        const locations = [
+            { coords: [37.46569942, 127.089786], name: '서울특별시 농업기술센터' },
+            { coords: [35.2132661, 128.9866578], name: '부산광역시 농업기술센터' },
+            { coords: [35.1795543, 126.8944389], name: '광주광역시 농업기술센터' },
+            { coords: [35.53729407, 129.311239], name: '울산광역시 농업기술센터' },
+            { coords: [36.30791127, 127.3063053], name: '대전광역시 농업기술센터' },
+            { coords: [37.76121113, 128.876019], name: '강원특별자치도 농업기술원' },
+            { coords: [36.57691051, 128.5058727], name: '경상북도 농업기술원' },
+            { coords: [35.42027213, 127.3898669], name: '전라북도 농업기술원' },
+            { coords: [34.81608397, 126.4629395], name: '전라남도 농업기술원' },
+            { coords: [35.82322281, 128.7378764], name: '대구광역시 농업기술센터' },
+            { coords: [36.6319897, 127.457292], name: '충청북도 농업기술원' },
+            { coords: [36.66124535, 126.6736907], name: '충청남도 농업기술원' },
+            { coords: [33.48901127, 126.4983026], name: '제주특별자치도 농업기술원' },
+            { coords: [37.55583491, 126.8022084], name: '경기도 농업기술원' },
+            { coords: [35.24867869, 128.6579133], name: '경상남도 농업기술원' },
+            { coords: [36.59113917, 127.2925249], name: '세종특별자치시 농업기술센터' },
+            { coords: [37.53861729, 126.992004], name: '인천광역시 농업기술센터' }
+        ];
+
+        locations.forEach(loc => {
+        L.marker(loc.coords).addTo(map)
+            .bindPopup(`<b>${loc.name}</b>`);
+        });
+    </script>
+    
+    <script>
+        // 서버에서 전달된 데이터 - JSON으로 안전하게 전달됨
+        const piePlants = {
+        1: {
+            categoryName: "{{ pie_plant1.category_name }}",
+            chartData: {{ pie_plant1.chart_data | tojson }}
+        },
+        2: {
+            categoryName: "{{ pie_plant2.category_name }}",
+            chartData: {{ pie_plant2.chart_data | tojson }}
+        }
+        };
+
+        // 차트 초기화 변수
+        let pieChartInstance = null;
+
+        // 차트 그리기 함수
+        function drawChart(plantKey) {
+        const data = piePlants[plantKey].chartData;
+        const labels = data.map(item => item.label);
+        const values = data.map(item => item.value);
+        const categoryName = piePlants[plantKey].categoryName;
+
+        
+        // 타이틀 변경 (없으면 생략)
+        const titleEl = document.getElementById('categoryTitle');
+        if (titleEl) {
+            titleEl.textContent = categoryName;
+        }
+
+        // 기존 차트가 있으면 파괴
+        if (pieChartInstance) {
+            pieChartInstance.destroy();
+        }
+
+        // 새로운 차트 생성
+        pieChartInstance = new Chart(document.getElementById('pieChart').getContext('2d'), {
+            type: 'pie',
+            data: {
+            labels: labels,
+            datasets: [{
+                data: values,
+                backgroundColor: plantKey === "1"
+                ? ['#6dbd63', '#ffb347', '#c26dbc', '#62b6cb', '#ffc6c7']
+                : ['#a3d9a5', '#ffd166', '#9d4edd', '#4ea8de', '#ffcad4']
+            }]
+            },
+            options: {
+            plugins: {
+                legend: { position: 'bottom' }
+            }
+            }
+        });
+        }
+
+        // 셀렉트 박스 이벤트 연결
+        document.getElementById('plantSelect').addEventListener('change', (event) => {
+        drawChart(event.target.value);
+        });
+
+        // 페이지 로드시 초기 차트 표시 (텃밭식물)
+        window.onload = () => {
+        drawChart("1");
+        };
+    </script>
+</body>
+</html>

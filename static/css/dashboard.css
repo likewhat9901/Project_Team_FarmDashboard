@@ -1,0 +1,542 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 전체 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'GmarketSansMedium', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  background: #f9f9f4; /* e8f5e9 f9f9f4 c8e6c9 */
+  display: flex;
+  /* 전체 scale 사이즈 줄이는 코드 */
+  /* transform: scale(0.98);
+  transform-origin: top center; */
+}
+
+
+
+
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: linear-gradient(135deg, #81c784 0%, #a5d6a7 30%, #c8e6c9 70%, #81c784 100%);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    height: calc(100vh - 40px);
+    position: relative;
+    box-shadow: 0 15px 35px rgba(76, 175, 80, 0.3), 0 5px 15px rgba(76, 175, 80, 0.2);
+}
+
+/* Sidebar - logo */
+.logo {
+    background: white;
+    width: 95px;        /* 가로 */
+    height: 95px;       /* 세로 (같은 크기) */
+    border-radius: 50%; /* 원형 */
+    padding: 10px;      /* 안쪽 여백 */
+    margin: 0 auto 30px auto; /* 가운데 정렬 + 아래 마진 */
+    text-align: center;
+    display: flex;      /* 가운데 배치 */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.logo-icon {
+    width: 90px;
+    height: 90px;
+    background: url('../images/사이트로고1.png') no-repeat center center;
+    background-size: 140%; 
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.logo-icon::before {
+    content: none;
+}
+
+
+.logo h2 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Sidebar - nav-menu */
+.nav-menu {
+    list-style: none;
+}
+
+.nav-item {
+    margin-bottom: 8px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-icon {
+    margin-right: 12px;
+    font-size: 16px;
+}
+
+
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Main Content - header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 300px 640px 620px;
+    grid-template-rows: auto auto;
+    gap: 25px;
+}
+
+/* Weather Card */
+.weather-card {
+    grid-column: 1;
+    grid-row: 1;
+    background: white;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 450px;
+    width: 300px;
+}
+
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.weather-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.weather-title::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/weather3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.weather-stat {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1b5e20;
+}
+
+/* Metric Cards Grid */
+.metric-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 2열 */
+    grid-template-rows: repeat(4, 1fr);    /* 2행 */
+    gap: 15px;
+    margin-bottom: 15px;
+    height: 220px;
+}
+
+.metric-card {
+    padding: 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.metric-card h3 {
+    margin: 0 0 8px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.metric-card p {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+/* 카드 색상 (사이트 테마 통일) */
+.metric-card.main {
+    display: none;
+}
+.metric-card.two {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+.metric-card.blue {
+    background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+}
+.metric-card.orange {
+    background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%);
+}
+.metric-card.pink {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+}
+
+/* Chart Card */
+.chart-card {
+    grid-column: 1 / span 2;  /* 1열부터 2열까지 가로로 합침 */
+    grid-row: 2;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    max-height: 500px;
+    height: 430px;   
+    margin: 0;
+}
+
+.chart-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#regionSelector {
+  padding: auto 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#regionSelector label {
+  font-size: 16px;
+  color: #333; 
+  font-weight: 600;
+}
+
+#regionSelector select {
+  padding: 6px 10px;
+  border: 1px solid #a5d6a7;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-size: 14px;
+  color: #388e3c;
+  cursor: pointer;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+#regionSelector select:hover {
+  border-color: #81c784;
+  box-shadow: 0 0 4px rgba(129, 199, 132, 0.5);
+}
+
+.crop-button {
+  margin: 5px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: 1px solid #81c784; /* 연그린 테두리 */
+  background: white; /* 밝은 연그린 배경 */
+  color: #2e7d32; /* 진한 녹색 글자 */
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, border 0.3s;
+}
+
+.crop-button:hover {
+  background: #c8e6c9; /* 호버 시 조금 진해짐 */
+  border-color: #66bb6a;
+}
+
+#barChart {
+  width: 100% !important;
+  display: block;
+}
+
+/* Ranking Card */
+.ranking-card {
+    grid-column: 3;
+    grid-row: 2;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    height: 430px;
+}
+
+.ranking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ranking-header h2 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.ranking-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#ranking-category-select {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#show-chart-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#crop-select {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+/* 테이블 래퍼 */
+.ranking-table-wrapper {
+    min-width: 350px;
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+
+/* 테이블 래퍼 */
+.ranking-table-wrapper {
+    min-width: 350px;
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+
+/* 테이블 기본 */
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/* 테이블 헤더 */
+.ranking-table thead {
+    background: #dff5e1; /* 연한 그린 */
+    color: #2e7d32;      /* 진녹색 텍스트 */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* 헤더 hover */
+.ranking-table th:hover {
+    cursor: pointer;
+    background: #ccebd1; /* 살짝 진한 연녹색 */
+}
+
+/* 셀 스타일 */
+.ranking-table th,
+.ranking-table td {
+    padding: 8px;
+    border: 1px solid #d0e4d3;
+    font-size: 14px;
+}
+
+/* 홀수 행 */
+.ranking-table tbody tr:nth-child(odd) {
+    background: #f3faf4; /* 아주 연한 그린 */
+}
+
+/* 짝수 행 */
+.ranking-table tbody tr:nth-child(even) {
+    background: #e8f5e9; /* 연녹색 */
+}
+
+/* hover 시 행 강조 */
+.ranking-table tbody tr:hover {
+    background: #d0e9d4; /* 조금 더 진한 연녹색 */
+    cursor: pointer;
+}
+
+/* 상태별 색상 뱃지 */
+.ranking-table .status-paid {
+    background-color: #d0f0d0; /* 연녹색 */
+    color: #2e7d32;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.ranking-table .status-unpaid {
+    background-color: #f8d7da; /* 연분홍 */
+    color: #c62828;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.ranking-table .status-pending {
+    background-color: #fff3cd; /* 연노랑 */
+    color: #a67c00;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.map-card {
+    grid-column: 3;
+    grid-row: 1;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    height: 450px;
+    width: 620px;
+}
+
+.map-card h3 {
+    margin-bottom: 7px; /* 원하는 간격(px) */
+}
+
+/* 파이차트 여기에 ~ */
+.empty-card {
+    grid-column: 2;
+    grid-row: 1;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    height: 450px;
+}
+.empty-card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chart-container {
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: -20px;
+}
+
+.chart-container canvas {
+    max-width: 100%;
+}
+
+.chart-container h3 {
+    color: #333;
+    font-size: 16px;
+    text-align: right;
+}
+
+.empty-card select {
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* iframe */
+.iframe-container {
+    display: flex;
+    width: 100%;
+}
+
+.iframe-container iframe {
+    width: 80%;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#searchContainer {
+    width: 500px;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: auto 30px;
+    background: white;
+    overflow: auto;
+}

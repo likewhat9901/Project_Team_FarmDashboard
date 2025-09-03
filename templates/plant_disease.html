@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>식물 병 감지</title>
+  <style>
+    /* 기존 스타일 유지 (생략 가능) */
+    @font-face {
+      font-family: 'GmarketSansMedium';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'GmarketSansMedium', sans-serif;
+      background: #f0f4f2;
+      height: 100vh;
+      display: flex;
+      overflow: hidden;
+    }
+    .fruit-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .fruit-btn {
+      background-color: #81c784;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    .fruit-btn:hover {
+      background-color: #66bb6a;
+    }
+    .fruit-btn.selected {
+      background-color: #4caf50;
+    }
+    .sidebar {
+      width: 220px;
+      background: linear-gradient(135deg, #81c784 0%, #a5d6a7 30%, #c8e6c9 70%, #81c784 100%);
+      padding: 20px;
+      border-radius: 20px;
+      margin: 20px;
+      height: calc(100vh - 40px);
+      position: relative;
+      box-shadow: 0 15px 35px rgba(76, 175, 80, 0.3), 0 5px 15px rgba(76, 175, 80, 0.2);
+      display: flex;
+      flex-direction: column;
+    }
+    .logo {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .logo-icon {
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(135deg, #66bb6a 0%, #81c784 100%);
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    }
+    .logo-icon::before {
+      content: '⚡';
+      color: white;
+      font-size: 18px;
+    }
+    .logo h2 {
+      color: #333;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .nav-menu {
+      list-style: none;
+      flex-grow: 1;
+    }
+    .nav-item {
+      margin-bottom: 8px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 12px 15px;
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .nav-link.active {
+      background: rgba(255, 255, 255, 0.5);
+      color: #333;
+      font-weight: bold;
+    }
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .nav-icon {
+      margin-right: 12px;
+      font-size: 16px;
+    }
+    .bottom-controls {
+      margin-top: auto;
+      border-top: 1px solid rgba(255,255,255,0.3);
+      padding-top: 15px;
+      gap: 10px;
+    }
+    .toggle-control {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      font-size: 14px;
+    }
+    .toggle-switch {
+      width: 40px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+    }
+    .toggle-switch::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: white;
+      border-radius: 50%;
+      top: 2px;
+      right: 2px;
+      transition: all 0.5s ease;
+    }
+    .toggle-switch.active::after {
+      transform: translateX(-20px);
+    }
+    .withdraw-btn {
+      display: flex;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      margin: 10px 0;
+    }
+    .logout-btn {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      width: 100%;
+    }
+    .main-content {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+    }
+    .main-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #1b5e20;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .detector-layout {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .box {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      width: 360px;
+    }
+    .box h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #388e3c;
+      text-align: center;
+    }
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #81c784;
+      border-radius: 8px;
+      background: #e8f5e9;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .preview {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: none;
+      margin-bottom: 20px;
+    }
+    .result-text {
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .disease-positive {
+      color: #d32f2f;
+    }
+    .disease-negative {
+      color: #388e3c;
+    }
+    .detector-layout {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+    .box {
+      width: 400px;
+      height: 500px;
+      background: white;
+      border-radius: 20px;
+      padding: 30px 40px;
+      box-shadow: 0 15px 35px rgba(76, 175, 80, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="logo">
+    <div class="logo-icon"></div>
+    <h2>Logo Here</h2>
+  </div>
+  <ul class="nav-menu">
+    <li class="nav-item"><a href="#" class="nav-link active"><span class="nav-icon">🏠</span> Dashboard</a></li>
+    <li class="nav-item"><a href="#" class="nav-link" onclick="location.href='/map'"><span class="nav-icon">🏫</span> 농업교육기관</a></li>
+    <li class="nav-item"><a href="#" class="nav-link" onclick="location.href='/flowershop'"><span class="nav-icon">🌼</span> 꽃집 지도</a></li>
+    <li class="nav-item"><a href="#" class="nav-link"><span class="nav-icon">⚙️</span> Setting</a></li>
+    <li class="nav-item"><a href="#" class="nav-link"><span class="nav-icon">🔒</span> Privacy</a></li>
+  </ul>
+  <div class="bottom-controls">
+    <div class="toggle-control"><span>🌙 Light Mode</span><div class="toggle-switch"></div></div>
+    <a href="#" class="withdraw-btn"><span>💰 Withdraw</span></a>
+    <button class="logout-btn">📤 Logout</button>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+  <h1 class="main-title">식물 병 감지기</h1>
+
+  <!-- 과일 버튼 -->
+  <div class="fruit-buttons">
+    <button class="fruit-btn" data-fruit="귤">귤</button>
+    <button class="fruit-btn" data-fruit="딸기">딸기</button>
+    <button class="fruit-btn" data-fruit="레몬">레몬</button>
+    <button class="fruit-btn" data-fruit="참외">참외</button>
+  </div>
+
+  <div class="detector-layout">
+    <!-- 이미지 업로드 -->
+    <div class="box">
+      <h2>이미지 업로드</h2>
+      <input type="file" accept="image/*" id="upload" />
+      <img id="preview" class="preview" alt="업로드된 이미지 미리보기" />
+      <div id="result" class="result"></div>
+    </div>
+
+    <!-- 진단 결과 -->
+    <div class="box">
+      <h2>진단 결과</h2>
+      <p id="diagnosis-message" class="result-text">이미지를 업로드하면 결과가 여기에 표시됩니다.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const fruitButtons = document.querySelectorAll('.fruit-btn');
+  const uploadInput = document.getElementById('upload');
+  const previewImg = document.getElementById('preview');
+  const resultDiv = document.getElementById('result');
+  const diagnosisMessage = document.getElementById('diagnosis-message');
+
+  let selectedFruit = null;
+
+  // 과일 버튼 클릭 시 선택 표시 및 값 저장
+  fruitButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      fruitButtons.forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedFruit = btn.getAttribute('data-fruit');
+      diagnosisMessage.textContent = `${selectedFruit}을(를) 선택했습니다. 이미지를 업로드하세요.`;
+      previewImg.style.display = 'none';
+      resultDiv.textContent = '';
+      uploadInput.value = ''; // 선택 초기화
+    });
+  });
+
+  uploadInput.addEventListener('change', async e => {
+    if (!selectedFruit) {
+      alert('먼저 과일을 선택하세요!');
+      uploadInput.value = '';
+      return;
+    }
+
+    const file = e.target.files[0];
+    if (!file) {
+      previewImg.style.display = 'none';
+      resultDiv.textContent = '';
+      diagnosisMessage.textContent = '이미지를 업로드하면 결과가 여기에 표시됩니다.';
+      return;
+    }
+
+    // 미리보기 설정
+    const reader = new FileReader();
+    reader.onload = () => {
+      previewImg.src = reader.result;
+      previewImg.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+
+    // 서버로 이미지 + 과일 이름 전송
+    const formData = new FormData();
+    formData.append('fruit', selectedFruit);
+    formData.append('image', file);
+
+    diagnosisMessage.textContent = '분석 중입니다... 잠시만 기다려 주세요.';
+
+    try {
+      const response = await fetch('/predict', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error('서버 에러 발생');
+      }
+
+      const data = await response.json();
+
+      if (data.error) {
+        diagnosisMessage.textContent = data.error;
+        resultDiv.textContent = '';
+      } else {
+        // 결과 출력
+        diagnosisMessage.textContent = `병명: ${data.disease}`;
+        resultDiv.innerHTML = `신뢰도: ${(data.confidence * 100).toFixed(2)}%`;
+      }
+
+    } catch (err) {
+      diagnosisMessage.textContent = '예측 중 오류가 발생했습니다.';
+      resultDiv.textContent = '';
+      console.error(err);
+    }
+  });
+</script>
+
+</body>
+</html>

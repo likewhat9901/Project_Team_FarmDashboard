@@ -1,0 +1,2877 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6a41da494fed0d42c93617a756a82085 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6a41da494fed0d42c93617a756a82085" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6a41da494fed0d42c93617a756a82085 = L.map(
+                "map_6a41da494fed0d42c93617a756a82085",
+                {
+                    center: [37.47, 126.88],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 9,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_218265eef95191724c141b21178b900e = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var marker_d6129da8fc9b677d16f4d560f9d8e233 = L.marker(
+                [37.46569942, 127.089786],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_7b41040677fa3c965ed9d8bda33c184d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d6129da8fc9b677d16f4d560f9d8e233.setIcon(icon_7b41040677fa3c965ed9d8bda33c184d);
+        
+    
+        var popup_615cdd12debb2b3e830826718676fe77 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e30380c58b92c1fc43ca8de9e61eb2c2 = $(`<div id="html_e30380c58b92c1fc43ca8de9e61eb2c2" style="width: 100.0%; height: 100.0%;"><b>서울특별시 농업기술센터</b><br>서울 서초구 내곡동 1-774</div>`)[0];
+                popup_615cdd12debb2b3e830826718676fe77.setContent(html_e30380c58b92c1fc43ca8de9e61eb2c2);
+            
+        
+
+        marker_d6129da8fc9b677d16f4d560f9d8e233.bindPopup(popup_615cdd12debb2b3e830826718676fe77)
+        ;
+
+        
+    
+    
+            var marker_8a25e94ef33d75e930621a50a4e0e4f2 = L.marker(
+                [37.46493908, 127.0884287],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_7ecc47f65f2dac2e9466de2535a8a846 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8a25e94ef33d75e930621a50a4e0e4f2.setIcon(icon_7ecc47f65f2dac2e9466de2535a8a846);
+        
+    
+        var popup_a1fbed729072eeb5226a9cd26923ca54 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_86d7083a2ab68be5e7de7503da185a84 = $(`<div id="html_86d7083a2ab68be5e7de7503da185a84" style="width: 100.0%; height: 100.0%;"><b>서울특별시 농업기술센터 스마트농장형 치유농업교육장</b><br>서울 서초구 내곡동 1-883</div>`)[0];
+                popup_a1fbed729072eeb5226a9cd26923ca54.setContent(html_86d7083a2ab68be5e7de7503da185a84);
+            
+        
+
+        marker_8a25e94ef33d75e930621a50a4e0e4f2.bindPopup(popup_a1fbed729072eeb5226a9cd26923ca54)
+        ;
+
+        
+    
+    
+            var marker_8a3ce541d09df789878b74d57e30ab3e = L.marker(
+                [37.48334605, 127.0229069],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_65e3904b6ba2ecd6cdffa94bf1e26b03 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8a3ce541d09df789878b74d57e30ab3e.setIcon(icon_65e3904b6ba2ecd6cdffa94bf1e26b03);
+        
+    
+        var popup_7c8049718c8f65f39aceb0358d43ba06 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b81a1f980aa996d9542580e04cea5d21 = $(`<div id="html_b81a1f980aa996d9542580e04cea5d21" style="width: 100.0%; height: 100.0%;"><b>대동 KIRO 로보틱스센터</b><br>서울 서초구 서초동 1422-1</div>`)[0];
+                popup_7c8049718c8f65f39aceb0358d43ba06.setContent(html_b81a1f980aa996d9542580e04cea5d21);
+            
+        
+
+        marker_8a3ce541d09df789878b74d57e30ab3e.bindPopup(popup_7c8049718c8f65f39aceb0358d43ba06)
+        ;
+
+        
+    
+    
+            var marker_d8fb2229ea20496fee95d6c90a315b68 = L.marker(
+                [37.60110012, 126.935146],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_e287f8425cd42321ebc7006c1802f0a1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d8fb2229ea20496fee95d6c90a315b68.setIcon(icon_e287f8425cd42321ebc7006c1802f0a1);
+        
+    
+        var popup_3f7019db4bab2a63fb8ff12969f56607 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5e71e4a3fb60d7733bd9f3ced7cc932d = $(`<div id="html_5e71e4a3fb60d7733bd9f3ced7cc932d" style="width: 100.0%; height: 100.0%;"><b>텃밭보급소</b><br>서울 은평구 녹번동 48-5</div>`)[0];
+                popup_3f7019db4bab2a63fb8ff12969f56607.setContent(html_5e71e4a3fb60d7733bd9f3ced7cc932d);
+            
+        
+
+        marker_d8fb2229ea20496fee95d6c90a315b68.bindPopup(popup_3f7019db4bab2a63fb8ff12969f56607)
+        ;
+
+        
+    
+    
+            var marker_4e34f043f652714a139a6e7bdebc0b69 = L.marker(
+                [37.47316698, 126.840239],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_fcbf2fa10c29136c5af6250129049bbb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4e34f043f652714a139a6e7bdebc0b69.setIcon(icon_fcbf2fa10c29136c5af6250129049bbb);
+        
+    
+        var popup_cb2b99096e72219796e76f6e3d594de3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e723db7ba1cfb54b7db642207279a528 = $(`<div id="html_e723db7ba1cfb54b7db642207279a528" style="width: 100.0%; height: 100.0%;"><b>광명텃밭보급소</b><br>경기 광명시 옥길동 70-5</div>`)[0];
+                popup_cb2b99096e72219796e76f6e3d594de3.setContent(html_e723db7ba1cfb54b7db642207279a528);
+            
+        
+
+        marker_4e34f043f652714a139a6e7bdebc0b69.bindPopup(popup_cb2b99096e72219796e76f6e3d594de3)
+        ;
+
+        
+    
+    
+            var marker_c91a5c0eb3c9f56ee9cc8e4a522b4233 = L.marker(
+                [37.60110012, 126.935146],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_3843524f450ecfabb96477307a42563c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c91a5c0eb3c9f56ee9cc8e4a522b4233.setIcon(icon_3843524f450ecfabb96477307a42563c);
+        
+    
+        var popup_c06c9153050fa5f4edcba8656d806f3c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6afb567d5de4c7e79f58c5b31e6e1584 = $(`<div id="html_6afb567d5de4c7e79f58c5b31e6e1584" style="width: 100.0%; height: 100.0%;"><b>사단법인 텃밭보급소</b><br>서울 은평구 녹번동 48-5</div>`)[0];
+                popup_c06c9153050fa5f4edcba8656d806f3c.setContent(html_6afb567d5de4c7e79f58c5b31e6e1584);
+            
+        
+
+        marker_c91a5c0eb3c9f56ee9cc8e4a522b4233.bindPopup(popup_c06c9153050fa5f4edcba8656d806f3c)
+        ;
+
+        
+    
+    
+            var marker_739d48f0bc44e3e8c6f12953ad996ea0 = L.marker(
+                [35.2132661, 128.9866578],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_fc7282f7a584455b81f147903569037c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_739d48f0bc44e3e8c6f12953ad996ea0.setIcon(icon_fc7282f7a584455b81f147903569037c);
+        
+    
+        var popup_eca1601885ea2f37794f64b1f73cf343 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d19a6cb365ee87a709cac6d065215256 = $(`<div id="html_d19a6cb365ee87a709cac6d065215256" style="width: 100.0%; height: 100.0%;"><b>부산광역시 농업기술센터</b><br>부산 강서구 대저1동 2426-2</div>`)[0];
+                popup_eca1601885ea2f37794f64b1f73cf343.setContent(html_d19a6cb365ee87a709cac6d065215256);
+            
+        
+
+        marker_739d48f0bc44e3e8c6f12953ad996ea0.bindPopup(popup_eca1601885ea2f37794f64b1f73cf343)
+        ;
+
+        
+    
+    
+            var marker_31500c16f56734da25e2235964d7b759 = L.marker(
+                [35.25261404, 129.1950196],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_bc709118fe1324709b022e2cb4c4ae5f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_31500c16f56734da25e2235964d7b759.setIcon(icon_bc709118fe1324709b022e2cb4c4ae5f);
+        
+    
+        var popup_40c3a1564400b47892847f1ad6df6790 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_26f996a20d955f1e8e89b7619e24d689 = $(`<div id="html_26f996a20d955f1e8e89b7619e24d689" style="width: 100.0%; height: 100.0%;"><b>기장군농업기술센터</b><br>부산 기장군 기장읍 만화리 333-28</div>`)[0];
+                popup_40c3a1564400b47892847f1ad6df6790.setContent(html_26f996a20d955f1e8e89b7619e24d689);
+            
+        
+
+        marker_31500c16f56734da25e2235964d7b759.bindPopup(popup_40c3a1564400b47892847f1ad6df6790)
+        ;
+
+        
+    
+    
+            var marker_c116b6c0f7f6671936963992e37020ea = L.marker(
+                [35.17855047, 128.9564846],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_db3a81fc63df14de74d66b196628c939 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c116b6c0f7f6671936963992e37020ea.setIcon(icon_db3a81fc63df14de74d66b196628c939);
+        
+    
+        var popup_8d5e998de19d89fc984b601d84eb4699 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6e77911229b6341fb6271878f7a3ce5a = $(`<div id="html_6e77911229b6341fb6271878f7a3ce5a" style="width: 100.0%; height: 100.0%;"><b>부산시농업기술센터 대저2지소</b><br>부산 강서구 대저2동 2011-3</div>`)[0];
+                popup_8d5e998de19d89fc984b601d84eb4699.setContent(html_6e77911229b6341fb6271878f7a3ce5a);
+            
+        
+
+        marker_c116b6c0f7f6671936963992e37020ea.bindPopup(popup_8d5e998de19d89fc984b601d84eb4699)
+        ;
+
+        
+    
+    
+            var marker_00a89ea2f855f3fd0d589a6cf5cff6c4 = L.marker(
+                [35.19890528, 129.0749494],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_525475031bbbd79fcf8b533ca020df0d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_00a89ea2f855f3fd0d589a6cf5cff6c4.setIcon(icon_525475031bbbd79fcf8b533ca020df0d);
+        
+    
+        var popup_daca63275c6b189e7ed478f9a3aac9c3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_075856cdc7561cfde0056d6a27f538d8 = $(`<div id="html_075856cdc7561cfde0056d6a27f538d8" style="width: 100.0%; height: 100.0%;"><b>부산귀농운동본부</b><br>부산 동래구 사직동 157-44</div>`)[0];
+                popup_daca63275c6b189e7ed478f9a3aac9c3.setContent(html_075856cdc7561cfde0056d6a27f538d8);
+            
+        
+
+        marker_00a89ea2f855f3fd0d589a6cf5cff6c4.bindPopup(popup_daca63275c6b189e7ed478f9a3aac9c3)
+        ;
+
+        
+    
+    
+            var marker_04990c9df5f20b4e2baac249ec2faacd = L.marker(
+                [35.09773868, 128.9196205],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_02b829ba1903ca02b1d4fb8dc3ae0a5b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_04990c9df5f20b4e2baac249ec2faacd.setIcon(icon_02b829ba1903ca02b1d4fb8dc3ae0a5b);
+        
+    
+        var popup_d9f0d469f818254fa151869569667299 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_be3b62bb8cf226a62e316babf0dcf39d = $(`<div id="html_be3b62bb8cf226a62e316babf0dcf39d" style="width: 100.0%; height: 100.0%;"><b>명지농협 국제신도시지점</b><br>부산 강서구 명지동 3412-6</div>`)[0];
+                popup_d9f0d469f818254fa151869569667299.setContent(html_be3b62bb8cf226a62e316babf0dcf39d);
+            
+        
+
+        marker_04990c9df5f20b4e2baac249ec2faacd.bindPopup(popup_d9f0d469f818254fa151869569667299)
+        ;
+
+        
+    
+    
+            var marker_4dc4ed4ae5a80da61fa87b73b42694fc = L.marker(
+                [35.32085717, 129.1894781],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_985b7762d9e93a096811ad776137008b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4dc4ed4ae5a80da61fa87b73b42694fc.setIcon(icon_985b7762d9e93a096811ad776137008b);
+        
+    
+        var popup_99762fb8fc3a09c97ed796e5f3b23c6b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c2eed2512d2a3f20e5186caba36f20b1 = $(`<div id="html_c2eed2512d2a3f20e5186caba36f20b1" style="width: 100.0%; height: 100.0%;"><b>양산기장축산농협 정관신도시지점</b><br>부산 기장군 정관읍 달산리 1221-3</div>`)[0];
+                popup_99762fb8fc3a09c97ed796e5f3b23c6b.setContent(html_c2eed2512d2a3f20e5186caba36f20b1);
+            
+        
+
+        marker_4dc4ed4ae5a80da61fa87b73b42694fc.bindPopup(popup_99762fb8fc3a09c97ed796e5f3b23c6b)
+        ;
+
+        
+    
+    
+            var marker_3181c61da2ca4cd5edbab5a3e8ae1cea = L.marker(
+                [37.53408708, 126.7446408],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_34cf4128e2df90ce2d4fae998e541341 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3181c61da2ca4cd5edbab5a3e8ae1cea.setIcon(icon_34cf4128e2df90ce2d4fae998e541341);
+        
+    
+        var popup_00d3b7633483cb2b443681823c3b232a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d000dda6f532d9c5b9aba817bdd85f26 = $(`<div id="html_d000dda6f532d9c5b9aba817bdd85f26" style="width: 100.0%; height: 100.0%;"><b>인천광역시 농업기술센터</b><br>인천 계양구 서운동 207-1</div>`)[0];
+                popup_00d3b7633483cb2b443681823c3b232a.setContent(html_d000dda6f532d9c5b9aba817bdd85f26);
+            
+        
+
+        marker_3181c61da2ca4cd5edbab5a3e8ae1cea.bindPopup(popup_00d3b7633483cb2b443681823c3b232a)
+        ;
+
+        
+    
+    
+            var marker_c875ca5d58b854bfe06c26511ea59719 = L.marker(
+                [37.7040039, 126.4352806],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_9aea5e78ceb4b3f120d510bae349ae9f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c875ca5d58b854bfe06c26511ea59719.setIcon(icon_9aea5e78ceb4b3f120d510bae349ae9f);
+        
+    
+        var popup_6f49eb24316bfc2a48d3ce229dba5c25 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1f3e38bd10b31da4db0c61d67f7cc1e9 = $(`<div id="html_1f3e38bd10b31da4db0c61d67f7cc1e9" style="width: 100.0%; height: 100.0%;"><b>강화군농업기술센터</b><br>인천 강화군 불은면 삼성리 1027-42</div>`)[0];
+                popup_6f49eb24316bfc2a48d3ce229dba5c25.setContent(html_1f3e38bd10b31da4db0c61d67f7cc1e9);
+            
+        
+
+        marker_c875ca5d58b854bfe06c26511ea59719.bindPopup(popup_6f49eb24316bfc2a48d3ce229dba5c25)
+        ;
+
+        
+    
+    
+            var marker_87d6486a1ab60e209e8d4ae1f8bbbb76 = L.marker(
+                [37.46014925, 126.6320419],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_115974000dbbe40218121bff1b5a0181 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_87d6486a1ab60e209e8d4ae1f8bbbb76.setIcon(icon_115974000dbbe40218121bff1b5a0181);
+        
+    
+        var popup_d843fdbe68ea5cd16d5686c2dbf7a56a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2c9da449f4b7ae533cbcb4d888e0afd7 = $(`<div id="html_2c9da449f4b7ae533cbcb4d888e0afd7" style="width: 100.0%; height: 100.0%;"><b>옹진군농업기술센터</b><br>인천 중구 신흥동3가 7-215</div>`)[0];
+                popup_d843fdbe68ea5cd16d5686c2dbf7a56a.setContent(html_2c9da449f4b7ae533cbcb4d888e0afd7);
+            
+        
+
+        marker_87d6486a1ab60e209e8d4ae1f8bbbb76.bindPopup(popup_d843fdbe68ea5cd16d5686c2dbf7a56a)
+        ;
+
+        
+    
+    
+            var marker_26f6457295b7f10aeaf1a323c45e3f1f = L.marker(
+                [37.44636153, 126.7080307],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_d56b915eadde431dd35d8335641fe80e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_26f6457295b7f10aeaf1a323c45e3f1f.setIcon(icon_d56b915eadde431dd35d8335641fe80e);
+        
+    
+        var popup_8aa643a1e3f60579346c39683b35dcd4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c64142007bcc17a72ec41fb44e88aa04 = $(`<div id="html_c64142007bcc17a72ec41fb44e88aa04" style="width: 100.0%; height: 100.0%;"><b>인천도시농업네트워크</b><br>인천 남동구 구월동 1186-3</div>`)[0];
+                popup_8aa643a1e3f60579346c39683b35dcd4.setContent(html_c64142007bcc17a72ec41fb44e88aa04);
+            
+        
+
+        marker_26f6457295b7f10aeaf1a323c45e3f1f.bindPopup(popup_8aa643a1e3f60579346c39683b35dcd4)
+        ;
+
+        
+    
+    
+            var marker_c39cb8fad0cb9cd70008f98975841bf3 = L.marker(
+                [36.30791127, 127.3063053],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_cf91b04daf3eee2b67f6682a16b532b8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c39cb8fad0cb9cd70008f98975841bf3.setIcon(icon_cf91b04daf3eee2b67f6682a16b532b8);
+        
+    
+        var popup_9c57ebafb2a0f318814a1a19c3a18591 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_21e49cd4468e46ed11f14a2f4d2ef093 = $(`<div id="html_21e49cd4468e46ed11f14a2f4d2ef093" style="width: 100.0%; height: 100.0%;"><b>대전광역시 농업기술센터</b><br>대전 유성구 교촌동 567</div>`)[0];
+                popup_9c57ebafb2a0f318814a1a19c3a18591.setContent(html_21e49cd4468e46ed11f14a2f4d2ef093);
+            
+        
+
+        marker_c39cb8fad0cb9cd70008f98975841bf3.bindPopup(popup_9c57ebafb2a0f318814a1a19c3a18591)
+        ;
+
+        
+    
+    
+            var marker_01b5be4f6745e9313cf6e29132fb1b90 = L.marker(
+                [36.30884558, 127.3074447],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_b3945555562a492ec2ce0974e82412a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_01b5be4f6745e9313cf6e29132fb1b90.setIcon(icon_b3945555562a492ec2ce0974e82412a9);
+        
+    
+        var popup_80d39d30b8faefd1b5329c65b26b5889 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_dd786b6889e23035b24c4a6765a668ca = $(`<div id="html_dd786b6889e23035b24c4a6765a668ca" style="width: 100.0%; height: 100.0%;"><b>대전시농업기술센터 케어팜 도시정원</b><br>대전 유성구 교촌동 413-2</div>`)[0];
+                popup_80d39d30b8faefd1b5329c65b26b5889.setContent(html_dd786b6889e23035b24c4a6765a668ca);
+            
+        
+
+        marker_01b5be4f6745e9313cf6e29132fb1b90.bindPopup(popup_80d39d30b8faefd1b5329c65b26b5889)
+        ;
+
+        
+    
+    
+            var marker_1899fc4a55eea4ceabcb2e0b2de5b3e5 = L.marker(
+                [36.36918539, 127.35353],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_89a8083ce1d644092f506908e0048462 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1899fc4a55eea4ceabcb2e0b2de5b3e5.setIcon(icon_89a8083ce1d644092f506908e0048462);
+        
+    
+        var popup_d2a355dadd2ae507103cceb9708f0f8a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a6882baecf7c8882be3254c39ea6d029 = $(`<div id="html_a6882baecf7c8882be3254c39ea6d029" style="width: 100.0%; height: 100.0%;"><b>충남대학교 농업과학기술센터</b><br>대전 유성구 어은동 48</div>`)[0];
+                popup_d2a355dadd2ae507103cceb9708f0f8a.setContent(html_a6882baecf7c8882be3254c39ea6d029);
+            
+        
+
+        marker_1899fc4a55eea4ceabcb2e0b2de5b3e5.bindPopup(popup_d2a355dadd2ae507103cceb9708f0f8a)
+        ;
+
+        
+    
+    
+            var marker_47258c01f1716f5c2799437173acab4c = L.marker(
+                [36.57264179, 127.2832569],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_cf3fdf6e448c2dd17b75e7672f268c3e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_47258c01f1716f5c2799437173acab4c.setIcon(icon_cf3fdf6e448c2dd17b75e7672f268c3e);
+        
+    
+        var popup_4c22c0180461b2e1a781192bd78e5b6c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_63d11f1c9395e38497134f4945db36ea = $(`<div id="html_63d11f1c9395e38497134f4945db36ea" style="width: 100.0%; height: 100.0%;"><b>세종특별자치시 농업기술센터</b><br>세종특별자치시 연서면 쌍전리 16</div>`)[0];
+                popup_4c22c0180461b2e1a781192bd78e5b6c.setContent(html_63d11f1c9395e38497134f4945db36ea);
+            
+        
+
+        marker_47258c01f1716f5c2799437173acab4c.bindPopup(popup_4c22c0180461b2e1a781192bd78e5b6c)
+        ;
+
+        
+    
+    
+            var marker_0dacaf0ce7c3bf8f2c20006362745c2f = L.marker(
+                [36.5354375, 127.3453161],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_43cf4e195b253b5a7de0251005afb15e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0dacaf0ce7c3bf8f2c20006362745c2f.setIcon(icon_43cf4e195b253b5a7de0251005afb15e);
+        
+    
+        var popup_4b4c31e2370cf15afaf76158cdbaaa32 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ffe56a76886e81e536b76a41f2ad2a74 = $(`<div id="html_ffe56a76886e81e536b76a41f2ad2a74" style="width: 100.0%; height: 100.0%;"><b>농기계임대사업소 중부분점</b><br>세종특별자치시 연동면 명학리 737</div>`)[0];
+                popup_4b4c31e2370cf15afaf76158cdbaaa32.setContent(html_ffe56a76886e81e536b76a41f2ad2a74);
+            
+        
+
+        marker_0dacaf0ce7c3bf8f2c20006362745c2f.bindPopup(popup_4b4c31e2370cf15afaf76158cdbaaa32)
+        ;
+
+        
+    
+    
+            var marker_ccdaf744bcde9cf27607e1d02a559dde = L.marker(
+                [36.57321084, 127.2819361],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_a7b24a516b5be286096f75aa1f4ce937 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ccdaf744bcde9cf27607e1d02a559dde.setIcon(icon_a7b24a516b5be286096f75aa1f4ce937);
+        
+    
+        var popup_bb0fa15d730e26469e62165282d155d8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1f9023c892366d57705ff19666b1c569 = $(`<div id="html_1f9023c892366d57705ff19666b1c569" style="width: 100.0%; height: 100.0%;"><b>세종특별자치시 농기계임대사업소 본점</b><br>세종특별자치시 연서면 쌍전리 667</div>`)[0];
+                popup_bb0fa15d730e26469e62165282d155d8.setContent(html_1f9023c892366d57705ff19666b1c569);
+            
+        
+
+        marker_ccdaf744bcde9cf27607e1d02a559dde.bindPopup(popup_bb0fa15d730e26469e62165282d155d8)
+        ;
+
+        
+    
+    
+            var marker_6073eb99ac9a47e75ad9dfa2e66c8b1c = L.marker(
+                [37.45900263, 126.9910482],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_4922be8a1b14c76c852e0b5c6ae2736b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6073eb99ac9a47e75ad9dfa2e66c8b1c.setIcon(icon_4922be8a1b14c76c852e0b5c6ae2736b);
+        
+    
+        var popup_c31ace89fd01c46a850ba89b71019da2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1b705cea8f302ad12eb8c4c692739368 = $(`<div id="html_1b705cea8f302ad12eb8c4c692739368" style="width: 100.0%; height: 100.0%;"><b>한국사이버원예대학 꽃숲치유팜</b><br>경기 과천시 과천동 498-1</div>`)[0];
+                popup_c31ace89fd01c46a850ba89b71019da2.setContent(html_1b705cea8f302ad12eb8c4c692739368);
+            
+        
+
+        marker_6073eb99ac9a47e75ad9dfa2e66c8b1c.bindPopup(popup_c31ace89fd01c46a850ba89b71019da2)
+        ;
+
+        
+    
+    
+            var marker_d2b1b93580abd57aa18e720b757f43d0 = L.marker(
+                [37.45297698, 127.001736],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_47d5f503a91a2458ab22705805e9651e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d2b1b93580abd57aa18e720b757f43d0.setIcon(icon_47d5f503a91a2458ab22705805e9651e);
+        
+    
+        var popup_b6b2600dd9c7a7b834b310f2fe8ffef9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7e910c2f0b509d9e9e09cf9d455397fc = $(`<div id="html_7e910c2f0b509d9e9e09cf9d455397fc" style="width: 100.0%; height: 100.0%;"><b>한국사이버원예대학 부설도시농업지원센터</b><br>경기 과천시 과천동 365-9</div>`)[0];
+                popup_b6b2600dd9c7a7b834b310f2fe8ffef9.setContent(html_7e910c2f0b509d9e9e09cf9d455397fc);
+            
+        
+
+        marker_d2b1b93580abd57aa18e720b757f43d0.bindPopup(popup_b6b2600dd9c7a7b834b310f2fe8ffef9)
+        ;
+
+        
+    
+    
+            var marker_9617d4042a495a20146e21fe916adbc5 = L.marker(
+                [37.92332042, 127.2260989],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_91e0028cdc6f61e6a110c160fb1bf5b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9617d4042a495a20146e21fe916adbc5.setIcon(icon_91e0028cdc6f61e6a110c160fb1bf5b2);
+        
+    
+        var popup_02843d77bdc2e9d984ec35cc49558b89 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cd93d3ab12a9dd5fb8f90a9e48d5b3f2 = $(`<div id="html_cd93d3ab12a9dd5fb8f90a9e48d5b3f2" style="width: 100.0%; height: 100.0%;"><b>포천시농업기술센터 본소</b><br>경기 포천시 신북면 기지리 647-1</div>`)[0];
+                popup_02843d77bdc2e9d984ec35cc49558b89.setContent(html_cd93d3ab12a9dd5fb8f90a9e48d5b3f2);
+            
+        
+
+        marker_9617d4042a495a20146e21fe916adbc5.bindPopup(popup_02843d77bdc2e9d984ec35cc49558b89)
+        ;
+
+        
+    
+    
+            var marker_dff2330df9e874496463ab676c62a7a7 = L.marker(
+                [37.92329511, 127.2252061],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_3001f0f8049daf95e9d5896621f636b6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_dff2330df9e874496463ab676c62a7a7.setIcon(icon_3001f0f8049daf95e9d5896621f636b6);
+        
+    
+        var popup_7eb00ffd5a14409878fa134c9e114d71 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7da378a46580a5e4d1aed5cf9f3f5b0d = $(`<div id="html_7da378a46580a5e4d1aed5cf9f3f5b0d" style="width: 100.0%; height: 100.0%;"><b>포천시농업기술센터 유용미생물배양센터</b><br>경기 포천시 신북면 기지리 647-1</div>`)[0];
+                popup_7eb00ffd5a14409878fa134c9e114d71.setContent(html_7da378a46580a5e4d1aed5cf9f3f5b0d);
+            
+        
+
+        marker_dff2330df9e874496463ab676c62a7a7.bindPopup(popup_7eb00ffd5a14409878fa134c9e114d71)
+        ;
+
+        
+    
+    
+            var marker_fad92ee3082a91371459535a01c36c77 = L.marker(
+                [37.99152862, 127.1886499],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_cc90e8003e301217352822771de2fb3f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fad92ee3082a91371459535a01c36c77.setIcon(icon_cc90e8003e301217352822771de2fb3f);
+        
+    
+        var popup_43a36bdf9634f631841a26c3b212dc8b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_84d3f9cffb80eb982d06bc13e5ff2f19 = $(`<div id="html_84d3f9cffb80eb982d06bc13e5ff2f19" style="width: 100.0%; height: 100.0%;"><b>포천시농업기술센터 창수농업인상담소</b><br>경기 포천시 창수면 주원리 251-4</div>`)[0];
+                popup_43a36bdf9634f631841a26c3b212dc8b.setContent(html_84d3f9cffb80eb982d06bc13e5ff2f19);
+            
+        
+
+        marker_fad92ee3082a91371459535a01c36c77.bindPopup(popup_43a36bdf9634f631841a26c3b212dc8b)
+        ;
+
+        
+    
+    
+            var marker_d5347660befa96087c1941e1d5238780 = L.marker(
+                [37.47316698, 126.840239],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_c97249e4fc25ebf6ca1554408911279d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d5347660befa96087c1941e1d5238780.setIcon(icon_c97249e4fc25ebf6ca1554408911279d);
+        
+    
+        var popup_6695f3b903d06b14354366c537d33a49 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e775ff82a3cdb1a73fae213ece64434e = $(`<div id="html_e775ff82a3cdb1a73fae213ece64434e" style="width: 100.0%; height: 100.0%;"><b>광명텃밭보급소</b><br>경기 광명시 옥길동 70-5</div>`)[0];
+                popup_6695f3b903d06b14354366c537d33a49.setContent(html_e775ff82a3cdb1a73fae213ece64434e);
+            
+        
+
+        marker_d5347660befa96087c1941e1d5238780.bindPopup(popup_6695f3b903d06b14354366c537d33a49)
+        ;
+
+        
+    
+    
+            var marker_9d73bd61c8936c7f9893d7425f3b9c57 = L.marker(
+                [37.07639758, 126.8728219],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_3bc1d372c7971ac3008112e71c47ba97 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9d73bd61c8936c7f9893d7425f3b9c57.setIcon(icon_3bc1d372c7971ac3008112e71c47ba97);
+        
+    
+        var popup_eff0fd242961659f8ccac8dd3b39be5d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ef9ca99905971583e10db405306703c3 = $(`<div id="html_ef9ca99905971583e10db405306703c3" style="width: 100.0%; height: 100.0%;"><b>화성시농업기술센터</b><br>경기 화성시 장안면 독정리 1294</div>`)[0];
+                popup_eff0fd242961659f8ccac8dd3b39be5d.setContent(html_ef9ca99905971583e10db405306703c3);
+            
+        
+
+        marker_9d73bd61c8936c7f9893d7425f3b9c57.bindPopup(popup_eff0fd242961659f8ccac8dd3b39be5d)
+        ;
+
+        
+    
+    
+            var marker_51d169bad077ef7f2eb81f3ee2ad8263 = L.marker(
+                [37.22247021, 127.0428634],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_469eef209a5d3a7c6474212285b808e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_51d169bad077ef7f2eb81f3ee2ad8263.setIcon(icon_469eef209a5d3a7c6474212285b808e5);
+        
+    
+        var popup_1efee3d0a8700766c223efcb573ff606 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_12198dda3f6f90663a34e488f6eeb69b = $(`<div id="html_12198dda3f6f90663a34e488f6eeb69b" style="width: 100.0%; height: 100.0%;"><b>경기도농업기술원</b><br>경기 화성시 기산동 274</div>`)[0];
+                popup_1efee3d0a8700766c223efcb573ff606.setContent(html_12198dda3f6f90663a34e488f6eeb69b);
+            
+        
+
+        marker_51d169bad077ef7f2eb81f3ee2ad8263.bindPopup(popup_1efee3d0a8700766c223efcb573ff606)
+        ;
+
+        
+    
+    
+            var marker_e1f9caf2e365586e2b6240df6c8acfc6 = L.marker(
+                [37.22243503, 127.0429648],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_20dff3c05e6c25f0cfcebf7d6808cc46 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e1f9caf2e365586e2b6240df6c8acfc6.setIcon(icon_20dff3c05e6c25f0cfcebf7d6808cc46);
+        
+    
+        var popup_4c5ac403dbcf61d4f4cbee86987f4790 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b2cf355d71385f2c2d292103b0800d78 = $(`<div id="html_b2cf355d71385f2c2d292103b0800d78" style="width: 100.0%; height: 100.0%;"><b>경기도농업기술원 본원</b><br>경기 화성시 기산동 315-14</div>`)[0];
+                popup_4c5ac403dbcf61d4f4cbee86987f4790.setContent(html_b2cf355d71385f2c2d292103b0800d78);
+            
+        
+
+        marker_e1f9caf2e365586e2b6240df6c8acfc6.bindPopup(popup_4c5ac403dbcf61d4f4cbee86987f4790)
+        ;
+
+        
+    
+    
+            var marker_3f4202b2c426b2a5e0aafdc21d636309 = L.marker(
+                [37.25012445, 126.9631647],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_37ce17a0af5990ca6f3a1343d3c3e2d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3f4202b2c426b2a5e0aafdc21d636309.setIcon(icon_37ce17a0af5990ca6f3a1343d3c3e2d1);
+        
+    
+        var popup_35160f45d1db0cd89bb96a11df231e5f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_577e243e826f09375e829ad0a697e671 = $(`<div id="html_577e243e826f09375e829ad0a697e671" style="width: 100.0%; height: 100.0%;"><b>수원시농업기술센터 농업기술과</b><br>경기 수원시 권선구 오목천동 40</div>`)[0];
+                popup_35160f45d1db0cd89bb96a11df231e5f.setContent(html_577e243e826f09375e829ad0a697e671);
+            
+        
+
+        marker_3f4202b2c426b2a5e0aafdc21d636309.bindPopup(popup_35160f45d1db0cd89bb96a11df231e5f)
+        ;
+
+        
+    
+    
+            var marker_9a4abb49e5a3a2ea3fdca107d2ecaf20 = L.marker(
+                [37.25012355, 126.9631658],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_2004d9400f73ed10604c14fdf9ed950e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9a4abb49e5a3a2ea3fdca107d2ecaf20.setIcon(icon_2004d9400f73ed10604c14fdf9ed950e);
+        
+    
+        var popup_400102d83715e6671bc804a9b6ce673c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bb77828d89557dec3a1e74d4c7caae7b = $(`<div id="html_bb77828d89557dec3a1e74d4c7caae7b" style="width: 100.0%; height: 100.0%;"><b>수원시농업기술센터</b><br>경기 수원시 권선구 오목천동 40</div>`)[0];
+                popup_400102d83715e6671bc804a9b6ce673c.setContent(html_bb77828d89557dec3a1e74d4c7caae7b);
+            
+        
+
+        marker_9a4abb49e5a3a2ea3fdca107d2ecaf20.bindPopup(popup_400102d83715e6671bc804a9b6ce673c)
+        ;
+
+        
+    
+    
+            var marker_e993b8fe1579638485b1d804dbf48592 = L.marker(
+                [37.25505136, 127.03047],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_788dae60213e10581996586866ded163 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e993b8fe1579638485b1d804dbf48592.setIcon(icon_788dae60213e10581996586866ded163);
+        
+    
+        var popup_61d9c49f49e8474c9c9aba6d9e7b46ee = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a510c565cf3e2b8ffc7b29485bfd109a = $(`<div id="html_a510c565cf3e2b8ffc7b29485bfd109a" style="width: 100.0%; height: 100.0%;"><b>수원시농업기술센터 생명산업과</b><br>경기 수원시 권선구 권선동 1229</div>`)[0];
+                popup_61d9c49f49e8474c9c9aba6d9e7b46ee.setContent(html_a510c565cf3e2b8ffc7b29485bfd109a);
+            
+        
+
+        marker_e993b8fe1579638485b1d804dbf48592.bindPopup(popup_61d9c49f49e8474c9c9aba6d9e7b46ee)
+        ;
+
+        
+    
+    
+            var marker_c5d20933cee7c49af8d282400430a7ab = L.marker(
+                [36.5881164, 127.5048172],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_8c554fe7c4e044bae62bac7376f7c26b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c5d20933cee7c49af8d282400430a7ab.setIcon(icon_8c554fe7c4e044bae62bac7376f7c26b);
+        
+    
+        var popup_83fded20200d9c1dfcee09d813f570f1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bd4e180be4118d360c9a7818d0af7062 = $(`<div id="html_bd4e180be4118d360c9a7818d0af7062" style="width: 100.0%; height: 100.0%;"><b>청주시농업기술센터</b><br>충북 청주시 상당구 남일면 효촌리 294</div>`)[0];
+                popup_83fded20200d9c1dfcee09d813f570f1.setContent(html_bd4e180be4118d360c9a7818d0af7062);
+            
+        
+
+        marker_c5d20933cee7c49af8d282400430a7ab.bindPopup(popup_83fded20200d9c1dfcee09d813f570f1)
+        ;
+
+        
+    
+    
+            var marker_16bbb13372b5d429b959b87ba9a62c9d = L.marker(
+                [36.58837197, 127.5038355],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_5cf3813b83beef8c6ffa0c9f3b62eedd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_16bbb13372b5d429b959b87ba9a62c9d.setIcon(icon_5cf3813b83beef8c6ffa0c9f3b62eedd);
+        
+    
+        var popup_83eb80ec354a5f2ce6fb19d0910b07e3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ac6ca663074714146e98e51a9ace492b = $(`<div id="html_ac6ca663074714146e98e51a9ace492b" style="width: 100.0%; height: 100.0%;"><b>청주시농업기술센터 농산물가공기술지원관</b><br>충북 청주시 상당구 남일면 효촌리 297</div>`)[0];
+                popup_83eb80ec354a5f2ce6fb19d0910b07e3.setContent(html_ac6ca663074714146e98e51a9ace492b);
+            
+        
+
+        marker_16bbb13372b5d429b959b87ba9a62c9d.bindPopup(popup_83eb80ec354a5f2ce6fb19d0910b07e3)
+        ;
+
+        
+    
+    
+            var marker_096a54998bd0a139c4a6932f576fe027 = L.marker(
+                [36.58813347, 127.5048307],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_5e14dab6fbff3c513df181dc97133225 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_096a54998bd0a139c4a6932f576fe027.setIcon(icon_5e14dab6fbff3c513df181dc97133225);
+        
+    
+        var popup_f8dda9a26eaa5cdddcb292bdce49feb6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ca8901984a658e3b6051e53ba4ba1663 = $(`<div id="html_ca8901984a658e3b6051e53ba4ba1663" style="width: 100.0%; height: 100.0%;"><b>청원군농업기술센터 농심관</b><br>충북 청주시 상당구 남일면 효촌리 92-2</div>`)[0];
+                popup_f8dda9a26eaa5cdddcb292bdce49feb6.setContent(html_ca8901984a658e3b6051e53ba4ba1663);
+            
+        
+
+        marker_096a54998bd0a139c4a6932f576fe027.bindPopup(popup_f8dda9a26eaa5cdddcb292bdce49feb6)
+        ;
+
+        
+    
+    
+            var marker_a1433920e5eeb74b221c524debac7111 = L.marker(
+                [36.04056034, 126.9584431],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_96ac77cbf09e08f43b8156eed5f64ca4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a1433920e5eeb74b221c524debac7111.setIcon(icon_96ac77cbf09e08f43b8156eed5f64ca4);
+        
+    
+        var popup_3b028845673cf334edcc488471df0ae4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7028c7b199fe5c73b4704383b77e7a80 = $(`<div id="html_7028c7b199fe5c73b4704383b77e7a80" style="width: 100.0%; height: 100.0%;"><b>익산시농업기술센터</b><br>전북특별자치도 익산시 함열읍 다송리 721-36</div>`)[0];
+                popup_3b028845673cf334edcc488471df0ae4.setContent(html_7028c7b199fe5c73b4704383b77e7a80);
+            
+        
+
+        marker_a1433920e5eeb74b221c524debac7111.bindPopup(popup_3b028845673cf334edcc488471df0ae4)
+        ;
+
+        
+    
+    
+            var marker_5fb0480b6f5f35203ef1fd53287a64c0 = L.marker(
+                [36.04015304, 126.9586098],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_8bd251c99f98228108500ea0cc2aade9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5fb0480b6f5f35203ef1fd53287a64c0.setIcon(icon_8bd251c99f98228108500ea0cc2aade9);
+        
+    
+        var popup_38e1f0cec15413f192e059b488d2fa8d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ee01392a5ffa65a6a238eae823e2d12c = $(`<div id="html_ee01392a5ffa65a6a238eae823e2d12c" style="width: 100.0%; height: 100.0%;"><b>익산시농업기술센터 농산과</b><br>전북특별자치도 익산시 함열읍 다송리 721-36</div>`)[0];
+                popup_38e1f0cec15413f192e059b488d2fa8d.setContent(html_ee01392a5ffa65a6a238eae823e2d12c);
+            
+        
+
+        marker_5fb0480b6f5f35203ef1fd53287a64c0.bindPopup(popup_38e1f0cec15413f192e059b488d2fa8d)
+        ;
+
+        
+    
+    
+            var marker_fdcf602b3f632a882c2214f4f8e37aed = L.marker(
+                [35.93494804, 126.9277796],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_3c8ef57f1b3cfd538a63fbf6394f76a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fdcf602b3f632a882c2214f4f8e37aed.setIcon(icon_3c8ef57f1b3cfd538a63fbf6394f76a3);
+        
+    
+        var popup_d53a25e0d2fe5f380a8a7db64546c436 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d869dc51f631439b6c2ca4c09606c420 = $(`<div id="html_d869dc51f631439b6c2ca4c09606c420" style="width: 100.0%; height: 100.0%;"><b>한국농업기술진흥원 ICT검인증센터</b><br>전북특별자치도 익산시 목천동 65-11</div>`)[0];
+                popup_d53a25e0d2fe5f380a8a7db64546c436.setContent(html_d869dc51f631439b6c2ca4c09606c420);
+            
+        
+
+        marker_fdcf602b3f632a882c2214f4f8e37aed.bindPopup(popup_d53a25e0d2fe5f380a8a7db64546c436)
+        ;
+
+        
+    
+    
+            var marker_0755d6653e57e3d31e17a34ada1ec813 = L.marker(
+                [36.56942809, 128.7371098],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_d7d561674fade46071f85783f5dc0b4e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0755d6653e57e3d31e17a34ada1ec813.setIcon(icon_d7d561674fade46071f85783f5dc0b4e);
+        
+    
+        var popup_e602b7c4856e840b07dcee84d7a6a933 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d11e7615758cbfdaca8ce024a0c00ebd = $(`<div id="html_d11e7615758cbfdaca8ce024a0c00ebd" style="width: 100.0%; height: 100.0%;"><b>가톨릭상지대학교</b><br>경북 안동시 율세동 산 104</div>`)[0];
+                popup_e602b7c4856e840b07dcee84d7a6a933.setContent(html_d11e7615758cbfdaca8ce024a0c00ebd);
+            
+        
+
+        marker_0755d6653e57e3d31e17a34ada1ec813.bindPopup(popup_e602b7c4856e840b07dcee84d7a6a933)
+        ;
+
+        
+    
+    
+            var marker_af68ed982eba6cf725c044d0f232bd08 = L.marker(
+                [36.5680974, 128.7357407],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_4651ea39836579b3bcc81740b2e4d2db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_af68ed982eba6cf725c044d0f232bd08.setIcon(icon_4651ea39836579b3bcc81740b2e4d2db);
+        
+    
+        var popup_c97203022a901237af3a18e274b5e7ae = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_db4f23e2ca94f5c9f16fd1d9c41a0c55 = $(`<div id="html_db4f23e2ca94f5c9f16fd1d9c41a0c55" style="width: 100.0%; height: 100.0%;"><b>가톨릭상지대학교 예지관</b><br>경북 안동시 율세동 393-2</div>`)[0];
+                popup_c97203022a901237af3a18e274b5e7ae.setContent(html_db4f23e2ca94f5c9f16fd1d9c41a0c55);
+            
+        
+
+        marker_af68ed982eba6cf725c044d0f232bd08.bindPopup(popup_c97203022a901237af3a18e274b5e7ae)
+        ;
+
+        
+    
+    
+            var marker_00beb3242d83475dcdba31bde5d3da1d = L.marker(
+                [36.57016359, 128.7359165],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_e546b52b20ec0323cae4f962183b2b72 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_00beb3242d83475dcdba31bde5d3da1d.setIcon(icon_e546b52b20ec0323cae4f962183b2b72);
+        
+    
+        var popup_6ae42346f93a66e14b8dcc394bdbce7e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0140824214b6e551b3a14c3682991f38 = $(`<div id="html_0140824214b6e551b3a14c3682991f38" style="width: 100.0%; height: 100.0%;"><b>가톨릭상지대학교 아녜스관</b><br>경북 안동시 율세동 380</div>`)[0];
+                popup_6ae42346f93a66e14b8dcc394bdbce7e.setContent(html_0140824214b6e551b3a14c3682991f38);
+            
+        
+
+        marker_00beb3242d83475dcdba31bde5d3da1d.bindPopup(popup_6ae42346f93a66e14b8dcc394bdbce7e)
+        ;
+
+        
+    
+    
+            var marker_304b94d444f72965a5230b77afc5261d = L.marker(
+                [37.40066006, 126.8083994],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_5040aae111bde8a741bfaa379971beeb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_304b94d444f72965a5230b77afc5261d.setIcon(icon_5040aae111bde8a741bfaa379971beeb);
+        
+    
+        var popup_dc7154a19854ac5523ca4de407fb27c1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bee53f6711bf6a46fda62c87e55e60c4 = $(`<div id="html_bee53f6711bf6a46fda62c87e55e60c4" style="width: 100.0%; height: 100.0%;"><b>시흥시농업기술센터</b><br>경기 시흥시 하중동 271</div>`)[0];
+                popup_dc7154a19854ac5523ca4de407fb27c1.setContent(html_bee53f6711bf6a46fda62c87e55e60c4);
+            
+        
+
+        marker_304b94d444f72965a5230b77afc5261d.bindPopup(popup_dc7154a19854ac5523ca4de407fb27c1)
+        ;
+
+        
+    
+    
+            var marker_09331008f07730e28f7d87e4bfd33ba7 = L.marker(
+                [37.40062053, 126.8084717],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_783ab518e2bad13eaba8ce7adfa53617 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_09331008f07730e28f7d87e4bfd33ba7.setIcon(icon_783ab518e2bad13eaba8ce7adfa53617);
+        
+    
+        var popup_6651ec6e19adfe15073b5b7287bd5f60 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_04bd333f474aa721f955acdfc83d6aa1 = $(`<div id="html_04bd333f474aa721f955acdfc83d6aa1" style="width: 100.0%; height: 100.0%;"><b>시흥시농업기술센터 천문관</b><br>경기 시흥시 하중동 270-3</div>`)[0];
+                popup_6651ec6e19adfe15073b5b7287bd5f60.setContent(html_04bd333f474aa721f955acdfc83d6aa1);
+            
+        
+
+        marker_09331008f07730e28f7d87e4bfd33ba7.bindPopup(popup_6651ec6e19adfe15073b5b7287bd5f60)
+        ;
+
+        
+    
+    
+            var marker_e1a4656506637fe2f680c066156d8262 = L.marker(
+                [37.48579885, 126.993736],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_9afd80f764901f6b5306a0db9b15e88b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e1a4656506637fe2f680c066156d8262.setIcon(icon_9afd80f764901f6b5306a0db9b15e88b);
+        
+    
+        var popup_9aafc9173526910cf80e62f9c479bcc0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5a4b8820d568e2ead2e9fb7c49b6eb59 = $(`<div id="html_5a4b8820d568e2ead2e9fb7c49b6eb59" style="width: 100.0%; height: 100.0%;"><b>전국도시농업시민협의회</b><br>서울 서초구 방배동 935-12</div>`)[0];
+                popup_9aafc9173526910cf80e62f9c479bcc0.setContent(html_5a4b8820d568e2ead2e9fb7c49b6eb59);
+            
+        
+
+        marker_e1a4656506637fe2f680c066156d8262.bindPopup(popup_9aafc9173526910cf80e62f9c479bcc0)
+        ;
+
+        
+    
+    
+            var marker_aa344589665fb3f4d2ce9b6516ddc9ac = L.marker(
+                [37.69478633, 126.5560316],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_a4ac66da2906103f86203d2637d469d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_aa344589665fb3f4d2ce9b6516ddc9ac.setIcon(icon_a4ac66da2906103f86203d2637d469d3);
+        
+    
+        var popup_433b7a0226be6c57f9e51202d59726ea = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2b935ea85b3c6ee9ffae49ccf30fed46 = $(`<div id="html_2b935ea85b3c6ee9ffae49ccf30fed46" style="width: 100.0%; height: 100.0%;"><b>김포시농업기술센터</b><br>경기 김포시 월곶면 갈산리 536-15</div>`)[0];
+                popup_433b7a0226be6c57f9e51202d59726ea.setContent(html_2b935ea85b3c6ee9ffae49ccf30fed46);
+            
+        
+
+        marker_aa344589665fb3f4d2ce9b6516ddc9ac.bindPopup(popup_433b7a0226be6c57f9e51202d59726ea)
+        ;
+
+        
+    
+    
+            var marker_6719f474286f4c22fd0dbb5501c0381d = L.marker(
+                [37.53408708, 126.7446408],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_34ef344bf335e1e09651cab24b7a24c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6719f474286f4c22fd0dbb5501c0381d.setIcon(icon_34ef344bf335e1e09651cab24b7a24c5);
+        
+    
+        var popup_36e2387d2b6e3a91e6fdc186b50ff2e1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e84dc64705376d87840bbd6b24a241f2 = $(`<div id="html_e84dc64705376d87840bbd6b24a241f2" style="width: 100.0%; height: 100.0%;"><b>인천광역시 농업기술센터</b><br>인천 계양구 서운동 207-1</div>`)[0];
+                popup_36e2387d2b6e3a91e6fdc186b50ff2e1.setContent(html_e84dc64705376d87840bbd6b24a241f2);
+            
+        
+
+        marker_6719f474286f4c22fd0dbb5501c0381d.bindPopup(popup_36e2387d2b6e3a91e6fdc186b50ff2e1)
+        ;
+
+        
+    
+    
+            var marker_ee30329a4077d973c7403164b6b438d9 = L.marker(
+                [37.53385359, 126.744998],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_efefea2e40f825479808527e3fcb41de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ee30329a4077d973c7403164b6b438d9.setIcon(icon_efefea2e40f825479808527e3fcb41de);
+        
+    
+        var popup_423952d987e4ba6f96139c3c3cd6c535 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_403271311f220e6e14ba05c487f44059 = $(`<div id="html_403271311f220e6e14ba05c487f44059" style="width: 100.0%; height: 100.0%;"><b>인천광역시 농업기술센터 인희재</b><br>인천 계양구 서운동 207-1</div>`)[0];
+                popup_423952d987e4ba6f96139c3c3cd6c535.setContent(html_403271311f220e6e14ba05c487f44059);
+            
+        
+
+        marker_ee30329a4077d973c7403164b6b438d9.bindPopup(popup_423952d987e4ba6f96139c3c3cd6c535)
+        ;
+
+        
+    
+    
+            var marker_4694d2f462632fab244103da5b249d31 = L.marker(
+                [37.22247021, 127.0428634],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_8f3bf8988480740158c21682b6b2d1af = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4694d2f462632fab244103da5b249d31.setIcon(icon_8f3bf8988480740158c21682b6b2d1af);
+        
+    
+        var popup_3876bd781c68a8cf0885c54a725c7a4e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_421ead961a61e75c8c01d6fb4e7a8cfe = $(`<div id="html_421ead961a61e75c8c01d6fb4e7a8cfe" style="width: 100.0%; height: 100.0%;"><b>경기도농업기술원</b><br>경기 화성시 기산동 274</div>`)[0];
+                popup_3876bd781c68a8cf0885c54a725c7a4e.setContent(html_421ead961a61e75c8c01d6fb4e7a8cfe);
+            
+        
+
+        marker_4694d2f462632fab244103da5b249d31.bindPopup(popup_3876bd781c68a8cf0885c54a725c7a4e)
+        ;
+
+        
+    
+    
+            var marker_058c4f97fb55f0a4448c12d57f906f2f = L.marker(
+                [37.22243503, 127.0429648],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_7567f25cac541f8557d4ba268760d2a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_058c4f97fb55f0a4448c12d57f906f2f.setIcon(icon_7567f25cac541f8557d4ba268760d2a2);
+        
+    
+        var popup_3ae938cc6bc6f0d191734426e2cb7895 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_002b39f568ca14053436670b2b32da94 = $(`<div id="html_002b39f568ca14053436670b2b32da94" style="width: 100.0%; height: 100.0%;"><b>경기도농업기술원 본원</b><br>경기 화성시 기산동 315-14</div>`)[0];
+                popup_3ae938cc6bc6f0d191734426e2cb7895.setContent(html_002b39f568ca14053436670b2b32da94);
+            
+        
+
+        marker_058c4f97fb55f0a4448c12d57f906f2f.bindPopup(popup_3ae938cc6bc6f0d191734426e2cb7895)
+        ;
+
+        
+    
+    
+            var marker_bf862f23a3277df3a6e7cc6cc84f5676 = L.marker(
+                [37.22178072, 127.0433678],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_25631cf1572eaab606179d23e9031b55 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bf862f23a3277df3a6e7cc6cc84f5676.setIcon(icon_25631cf1572eaab606179d23e9031b55);
+        
+    
+        var popup_5538ebc86cad25796c687944a89b179b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_11c4a14e7c150fbe32b9828e85694f75 = $(`<div id="html_11c4a14e7c150fbe32b9828e85694f75" style="width: 100.0%; height: 100.0%;"><b>경기도농업기술원 치유농업센터</b><br>경기 화성시 기산동 274</div>`)[0];
+                popup_5538ebc86cad25796c687944a89b179b.setContent(html_11c4a14e7c150fbe32b9828e85694f75);
+            
+        
+
+        marker_bf862f23a3277df3a6e7cc6cc84f5676.bindPopup(popup_5538ebc86cad25796c687944a89b179b)
+        ;
+
+        
+    
+    
+            var marker_463380334597bd4cbe93a508c71e71de = L.marker(
+                [37.82243027, 126.9740924],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_657fe1976fc21c5b89ebf89c64e5ed63 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_463380334597bd4cbe93a508c71e71de.setIcon(icon_657fe1976fc21c5b89ebf89c64e5ed63);
+        
+    
+        var popup_5885dcd4687b8e51fa7d26474fed28c9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_732c024be5171c17053193cdbe01e327 = $(`<div id="html_732c024be5171c17053193cdbe01e327" style="width: 100.0%; height: 100.0%;"><b>양주시농업기술센터</b><br>경기 양주시 광적면 광석리 278</div>`)[0];
+                popup_5885dcd4687b8e51fa7d26474fed28c9.setContent(html_732c024be5171c17053193cdbe01e327);
+            
+        
+
+        marker_463380334597bd4cbe93a508c71e71de.bindPopup(popup_5885dcd4687b8e51fa7d26474fed28c9)
+        ;
+
+        
+    
+    
+            var marker_f0fa7e447ddb3782438d0e6339bbf6b5 = L.marker(
+                [36.42016926, 127.377306],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_9457aca11708e6d80cf2c3d7a1dacf10 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f0fa7e447ddb3782438d0e6339bbf6b5.setIcon(icon_9457aca11708e6d80cf2c3d7a1dacf10);
+        
+    
+        var popup_cbd3391948df44bef440515091d326b9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_60758f67aabc6dcf8323a97fc5622d7b = $(`<div id="html_60758f67aabc6dcf8323a97fc5622d7b" style="width: 100.0%; height: 100.0%;"><b>손수레</b><br>대전 유성구 덕진동 46-2</div>`)[0];
+                popup_cbd3391948df44bef440515091d326b9.setContent(html_60758f67aabc6dcf8323a97fc5622d7b);
+            
+        
+
+        marker_f0fa7e447ddb3782438d0e6339bbf6b5.bindPopup(popup_cbd3391948df44bef440515091d326b9)
+        ;
+
+        
+    
+    
+            var marker_cb246642bbd2fd86a4eefdf3def44095 = L.marker(
+                [35.8621193, 128.5877502],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_c3482fde8ce3f4f1b775bcbb9828c0c9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cb246642bbd2fd86a4eefdf3def44095.setIcon(icon_c3482fde8ce3f4f1b775bcbb9828c0c9);
+        
+    
+        var popup_af5c6aa4051d3fa6fa9a11d7dfc532fd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3e79134628c82def795dbd1b89539c74 = $(`<div id="html_3e79134628c82def795dbd1b89539c74" style="width: 100.0%; height: 100.0%;"><b>대구가톨릭대학교 유스티노캠퍼스</b><br>대구 중구 남산동 219</div>`)[0];
+                popup_af5c6aa4051d3fa6fa9a11d7dfc532fd.setContent(html_3e79134628c82def795dbd1b89539c74);
+            
+        
+
+        marker_cb246642bbd2fd86a4eefdf3def44095.bindPopup(popup_af5c6aa4051d3fa6fa9a11d7dfc532fd)
+        ;
+
+        
+    
+    
+            var marker_2fd361c52a7396cbc35d50c8aa91a5c0 = L.marker(
+                [35.84398406, 128.565545],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_b6c9222b8c761f433dcd83da5ab0b8f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2fd361c52a7396cbc35d50c8aa91a5c0.setIcon(icon_b6c9222b8c761f433dcd83da5ab0b8f3);
+        
+    
+        var popup_06fbd1e469fc934257399c6e97bde8e7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_43b7688ed7ce4404519bca11e567a75a = $(`<div id="html_43b7688ed7ce4404519bca11e567a75a" style="width: 100.0%; height: 100.0%;"><b>대구가톨릭대학교 루가캠퍼스</b><br>대구 남구 대명동 332-1</div>`)[0];
+                popup_06fbd1e469fc934257399c6e97bde8e7.setContent(html_43b7688ed7ce4404519bca11e567a75a);
+            
+        
+
+        marker_2fd361c52a7396cbc35d50c8aa91a5c0.bindPopup(popup_06fbd1e469fc934257399c6e97bde8e7)
+        ;
+
+        
+    
+    
+            var marker_9c80757e6ae44a52936556ccbde19d0b = L.marker(
+                [35.91124375, 128.8079076],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_4cde20be789c3de7705b2f8c72c185b7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9c80757e6ae44a52936556ccbde19d0b.setIcon(icon_4cde20be789c3de7705b2f8c72c185b7);
+        
+    
+        var popup_0eccd825c2040a98ca38acb9b39d8eed = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_82cb18b43e002f66e4e5fda7228bd020 = $(`<div id="html_82cb18b43e002f66e4e5fda7228bd020" style="width: 100.0%; height: 100.0%;"><b>대구가톨릭대학교 효성캠퍼스</b><br>경북 경산시 하양읍 금락리 산 35</div>`)[0];
+                popup_0eccd825c2040a98ca38acb9b39d8eed.setContent(html_82cb18b43e002f66e4e5fda7228bd020);
+            
+        
+
+        marker_9c80757e6ae44a52936556ccbde19d0b.bindPopup(popup_0eccd825c2040a98ca38acb9b39d8eed)
+        ;
+
+        
+    
+    
+            var marker_3c212f644f564c4bde3c2886269354ff = L.marker(
+                [35.02298721, 126.8320146],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_d7b07e15097bbc3de304efe22b4e53bd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3c212f644f564c4bde3c2886269354ff.setIcon(icon_d7b07e15097bbc3de304efe22b4e53bd);
+        
+    
+        var popup_cef9bb5c0a43042ab6c0305d04ee9655 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c76341d267e0fd14dbecd54005880984 = $(`<div id="html_c76341d267e0fd14dbecd54005880984" style="width: 100.0%; height: 100.0%;"><b>전라남도농업기술원</b><br>전남 나주시 산포면 등수리 49-4</div>`)[0];
+                popup_cef9bb5c0a43042ab6c0305d04ee9655.setContent(html_c76341d267e0fd14dbecd54005880984);
+            
+        
+
+        marker_3c212f644f564c4bde3c2886269354ff.bindPopup(popup_cef9bb5c0a43042ab6c0305d04ee9655)
+        ;
+
+        
+    
+    
+            var marker_742fcf77d093322e2adaf4e6e551b959 = L.marker(
+                [35.02367286, 126.8324471],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_b9f580071e7814f82691fcafa2799496 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_742fcf77d093322e2adaf4e6e551b959.setIcon(icon_b9f580071e7814f82691fcafa2799496);
+        
+    
+        var popup_5a618a3ef67e94e4ae3af6f29306b3ff = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fc774db027e1e7e1ad8b5dfd2e776178 = $(`<div id="html_fc774db027e1e7e1ad8b5dfd2e776178" style="width: 100.0%; height: 100.0%;"><b>전라남도농업기술원 교육관</b><br>전남 나주시 산포면 등수리 49-3</div>`)[0];
+                popup_5a618a3ef67e94e4ae3af6f29306b3ff.setContent(html_fc774db027e1e7e1ad8b5dfd2e776178);
+            
+        
+
+        marker_742fcf77d093322e2adaf4e6e551b959.bindPopup(popup_5a618a3ef67e94e4ae3af6f29306b3ff)
+        ;
+
+        
+    
+    
+            var marker_396e6bf19954773cdcde0b223c0147a7 = L.marker(
+                [35.02308036, 126.8322346],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_a014b9daf1aa7bfa7c0f15bc2b613b98 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_396e6bf19954773cdcde0b223c0147a7.setIcon(icon_a014b9daf1aa7bfa7c0f15bc2b613b98);
+        
+    
+        var popup_ac24dfcb263315ed0d4b42bab999bb81 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cb4284a7edb7f4431e18881887d35f3d = $(`<div id="html_cb4284a7edb7f4431e18881887d35f3d" style="width: 100.0%; height: 100.0%;"><b>전라남도농업기술원 원예연구소</b><br>전남 나주시 산포면 산제리 206-7</div>`)[0];
+                popup_ac24dfcb263315ed0d4b42bab999bb81.setContent(html_cb4284a7edb7f4431e18881887d35f3d);
+            
+        
+
+        marker_396e6bf19954773cdcde0b223c0147a7.bindPopup(popup_ac24dfcb263315ed0d4b42bab999bb81)
+        ;
+
+        
+    
+    
+            var marker_7eb45aca135295b209c6f87b216af8cb = L.marker(
+                [35.21404278, 128.8706219],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_1bc28a6b362c7699fe7551a06aee015a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7eb45aca135295b209c6f87b216af8cb.setIcon(icon_1bc28a6b362c7699fe7551a06aee015a);
+        
+    
+        var popup_b28f9e552a904b47376064c4ac4656a2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3ab96b4782a19d1b0073d5ec1e26abe1 = $(`<div id="html_3ab96b4782a19d1b0073d5ec1e26abe1" style="width: 100.0%; height: 100.0%;"><b>김해시농업기술센터</b><br>경남 김해시 전하동 900</div>`)[0];
+                popup_b28f9e552a904b47376064c4ac4656a2.setContent(html_3ab96b4782a19d1b0073d5ec1e26abe1);
+            
+        
+
+        marker_7eb45aca135295b209c6f87b216af8cb.bindPopup(popup_b28f9e552a904b47376064c4ac4656a2)
+        ;
+
+        
+    
+    
+            var marker_b03990df571dedee52df41b63cf316ca = L.marker(
+                [35.2132661, 128.9866578],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_79558db31aea00778ac83fca465b68ed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b03990df571dedee52df41b63cf316ca.setIcon(icon_79558db31aea00778ac83fca465b68ed);
+        
+    
+        var popup_4a1ba9722269ea4882159ae54277f66f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2c059fbe7ed5de4645ef2b967c497026 = $(`<div id="html_2c059fbe7ed5de4645ef2b967c497026" style="width: 100.0%; height: 100.0%;"><b>부산광역시 농업기술센터</b><br>부산 강서구 대저1동 2426-2</div>`)[0];
+                popup_4a1ba9722269ea4882159ae54277f66f.setContent(html_2c059fbe7ed5de4645ef2b967c497026);
+            
+        
+
+        marker_b03990df571dedee52df41b63cf316ca.bindPopup(popup_4a1ba9722269ea4882159ae54277f66f)
+        ;
+
+        
+    
+    
+            var marker_a745df098f0ae408157bb34647491e64 = L.marker(
+                [35.17855047, 128.9564846],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_d4cb54039c28c103e5d619c571e82e82 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a745df098f0ae408157bb34647491e64.setIcon(icon_d4cb54039c28c103e5d619c571e82e82);
+        
+    
+        var popup_a7713bfa505d23cf7cfa4eb7021f55f0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b30b96a6c5d2459f7fea1868103969c0 = $(`<div id="html_b30b96a6c5d2459f7fea1868103969c0" style="width: 100.0%; height: 100.0%;"><b>부산시농업기술센터 대저2지소</b><br>부산 강서구 대저2동 2011-3</div>`)[0];
+                popup_a7713bfa505d23cf7cfa4eb7021f55f0.setContent(html_b30b96a6c5d2459f7fea1868103969c0);
+            
+        
+
+        marker_a745df098f0ae408157bb34647491e64.bindPopup(popup_a7713bfa505d23cf7cfa4eb7021f55f0)
+        ;
+
+        
+    
+    
+            var marker_d3ce067a3d15d5b7e49605ccbaf2bf89 = L.marker(
+                [35.23898946, 128.6466604],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_227d043b8c07eec410abad9fd7bf2938 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d3ce067a3d15d5b7e49605ccbaf2bf89.setIcon(icon_227d043b8c07eec410abad9fd7bf2938);
+        
+    
+        var popup_8dfcbf01d4fba3c98eea8b0a78aeafdc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_daf569daa3e319770e744bb4da167658 = $(`<div id="html_daf569daa3e319770e744bb4da167658" style="width: 100.0%; height: 100.0%;"><b>창원시농업기술센터</b><br>경남 창원시 의창구 명서동 211</div>`)[0];
+                popup_8dfcbf01d4fba3c98eea8b0a78aeafdc.setContent(html_daf569daa3e319770e744bb4da167658);
+            
+        
+
+        marker_d3ce067a3d15d5b7e49605ccbaf2bf89.bindPopup(popup_8dfcbf01d4fba3c98eea8b0a78aeafdc)
+        ;
+
+        
+    
+    
+            var marker_1746ad75e0115891639a7def3a49c977 = L.marker(
+                [35.11399798, 128.7542272],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_e44aae39c01a0ad11056cacac2441c02 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1746ad75e0115891639a7def3a49c977.setIcon(icon_e44aae39c01a0ad11056cacac2441c02);
+        
+    
+        var popup_4703f97cb4e12e91088e07a918bbd7e7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_59e9a471c89d84d6af3922925ac78925 = $(`<div id="html_59e9a471c89d84d6af3922925ac78925" style="width: 100.0%; height: 100.0%;"><b>창원농업기술센터 진해기술지원과</b><br>경남 창원시 진해구 성내동 205</div>`)[0];
+                popup_4703f97cb4e12e91088e07a918bbd7e7.setContent(html_59e9a471c89d84d6af3922925ac78925);
+            
+        
+
+        marker_1746ad75e0115891639a7def3a49c977.bindPopup(popup_4703f97cb4e12e91088e07a918bbd7e7)
+        ;
+
+        
+    
+    
+            var marker_20bd06bd9a9a0a2469f10e6ecbffa57d = L.marker(
+                [35.11402911, 128.7543178],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_493cd0c6fd87c49df36853e0e8ca1cd9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_20bd06bd9a9a0a2469f10e6ecbffa57d.setIcon(icon_493cd0c6fd87c49df36853e0e8ca1cd9);
+        
+    
+        var popup_1bc632f399c38eb52875d9d90cbc074c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5f15849367d599406eaf843a2f41dc81 = $(`<div id="html_5f15849367d599406eaf843a2f41dc81" style="width: 100.0%; height: 100.0%;"><b>창원농업기술센터 도시농업과</b><br>경남 창원시 진해구 성내동 205</div>`)[0];
+                popup_1bc632f399c38eb52875d9d90cbc074c.setContent(html_5f15849367d599406eaf843a2f41dc81);
+            
+        
+
+        marker_20bd06bd9a9a0a2469f10e6ecbffa57d.bindPopup(popup_1bc632f399c38eb52875d9d90cbc074c)
+        ;
+
+        
+    
+    
+            var marker_507ad0491c2818a943df518b63e5c746 = L.marker(
+                [37.76397257, 126.7955359],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_f166cee34b712b2e791d75c8b8bc196e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_507ad0491c2818a943df518b63e5c746.setIcon(icon_f166cee34b712b2e791d75c8b8bc196e);
+        
+    
+        var popup_8994a9feb25c3a66593e326519e5afff = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f08b40a259739b05f488977a6cc6156c = $(`<div id="html_f08b40a259739b05f488977a6cc6156c" style="width: 100.0%; height: 100.0%;"><b>파주시농업기술센터</b><br>경기 파주시 아동동 91-6</div>`)[0];
+                popup_8994a9feb25c3a66593e326519e5afff.setContent(html_f08b40a259739b05f488977a6cc6156c);
+            
+        
+
+        marker_507ad0491c2818a943df518b63e5c746.bindPopup(popup_8994a9feb25c3a66593e326519e5afff)
+        ;
+
+        
+    
+    
+            var marker_d0b1616a1081488d92f4b74fc16db256 = L.marker(
+                [37.76515582, 126.7962227],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_0df78ad991b318c80c00f0335b31e90b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d0b1616a1081488d92f4b74fc16db256.setIcon(icon_0df78ad991b318c80c00f0335b31e90b);
+        
+    
+        var popup_df8ec07470a7bfd57b9099c13f818644 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3139a440598552bd9da9c5487bb0b151 = $(`<div id="html_3139a440598552bd9da9c5487bb0b151" style="width: 100.0%; height: 100.0%;"><b>파주시농기계임대사업소 파주본소</b><br>경기 파주시 월롱면 영태리 379-2</div>`)[0];
+                popup_df8ec07470a7bfd57b9099c13f818644.setContent(html_3139a440598552bd9da9c5487bb0b151);
+            
+        
+
+        marker_d0b1616a1081488d92f4b74fc16db256.bindPopup(popup_df8ec07470a7bfd57b9099c13f818644)
+        ;
+
+        
+    
+    
+            var marker_2b24f360703b681b9510c1891916e841 = L.marker(
+                [37.4287995, 127.104859],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_60b646b1f854335051b7da0294c99591 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2b24f360703b681b9510c1891916e841.setIcon(icon_60b646b1f854335051b7da0294c99591);
+        
+    
+        var popup_d13864eb7d176995d0668166014d255a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fcca7f8d885a768b6e9967385e56ddaf = $(`<div id="html_fcca7f8d885a768b6e9967385e56ddaf" style="width: 100.0%; height: 100.0%;"><b>성남시농업기술센터</b><br>경기 성남시 수정구 고등동 378-1</div>`)[0];
+                popup_d13864eb7d176995d0668166014d255a.setContent(html_fcca7f8d885a768b6e9967385e56ddaf);
+            
+        
+
+        marker_2b24f360703b681b9510c1891916e841.bindPopup(popup_d13864eb7d176995d0668166014d255a)
+        ;
+
+        
+    
+    
+            var marker_17cd2a199634867daf677a7a5aaf8474 = L.marker(
+                [37.46569942, 127.089786],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_048495657b785d140e95d98d2aafd901 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_17cd2a199634867daf677a7a5aaf8474.setIcon(icon_048495657b785d140e95d98d2aafd901);
+        
+    
+        var popup_83b8cf8e7d840cb3e0b29fa29b7d40ef = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9bca5637d971a0e74df83952ee6e8333 = $(`<div id="html_9bca5637d971a0e74df83952ee6e8333" style="width: 100.0%; height: 100.0%;"><b>서울특별시 농업기술센터</b><br>서울 서초구 내곡동 1-774</div>`)[0];
+                popup_83b8cf8e7d840cb3e0b29fa29b7d40ef.setContent(html_9bca5637d971a0e74df83952ee6e8333);
+            
+        
+
+        marker_17cd2a199634867daf677a7a5aaf8474.bindPopup(popup_83b8cf8e7d840cb3e0b29fa29b7d40ef)
+        ;
+
+        
+    
+    
+            var marker_57df6c929c5f19264adce83bc1867f50 = L.marker(
+                [37.46493908, 127.0884287],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_2b51c5d83c116dcd6e55d3ba3a0ebd28 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_57df6c929c5f19264adce83bc1867f50.setIcon(icon_2b51c5d83c116dcd6e55d3ba3a0ebd28);
+        
+    
+        var popup_31e21479d2f15860caf926f9b62bc189 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1f76b219270bd6a75d8a84d79774e5de = $(`<div id="html_1f76b219270bd6a75d8a84d79774e5de" style="width: 100.0%; height: 100.0%;"><b>서울특별시 농업기술센터 스마트농장형 치유농업교육장</b><br>서울 서초구 내곡동 1-883</div>`)[0];
+                popup_31e21479d2f15860caf926f9b62bc189.setContent(html_1f76b219270bd6a75d8a84d79774e5de);
+            
+        
+
+        marker_57df6c929c5f19264adce83bc1867f50.bindPopup(popup_31e21479d2f15860caf926f9b62bc189)
+        ;
+
+        
+    
+    
+            var marker_bd4fd8d066c5e1cfb45fbb966d75173e = L.marker(
+                [37.29128193, 127.0119092],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_069a80cb7079741fe67add7753f6eaeb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bd4fd8d066c5e1cfb45fbb966d75173e.setIcon(icon_069a80cb7079741fe67add7753f6eaeb);
+        
+    
+        var popup_edfa843e21af56abe41267893370757c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ee64143d5332e5444de500b46d1f9107 = $(`<div id="html_ee64143d5332e5444de500b46d1f9107" style="width: 100.0%; height: 100.0%;"><b>팝그린</b><br>경기 수원시 장안구 영화동 308-1</div>`)[0];
+                popup_edfa843e21af56abe41267893370757c.setContent(html_ee64143d5332e5444de500b46d1f9107);
+            
+        
+
+        marker_bd4fd8d066c5e1cfb45fbb966d75173e.bindPopup(popup_edfa843e21af56abe41267893370757c)
+        ;
+
+        
+    
+    
+            var marker_067ffe857abf657d4ca77a9f8728a8c9 = L.marker(
+                [37.31149387, 127.0244091],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_1b34b3669bd9a30435d852fa9eb4b3e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_067ffe857abf657d4ca77a9f8728a8c9.setIcon(icon_1b34b3669bd9a30435d852fa9eb4b3e7);
+        
+    
+        var popup_e3dd2d5651e2254175c1aebef7da4be1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d9c8b8a647ac1356159a786a80016d12 = $(`<div id="html_d9c8b8a647ac1356159a786a80016d12" style="width: 100.0%; height: 100.0%;"><b>팝그린광교농장</b><br>경기 수원시 장안구 하광교동 263</div>`)[0];
+                popup_e3dd2d5651e2254175c1aebef7da4be1.setContent(html_d9c8b8a647ac1356159a786a80016d12);
+            
+        
+
+        marker_067ffe857abf657d4ca77a9f8728a8c9.bindPopup(popup_e3dd2d5651e2254175c1aebef7da4be1)
+        ;
+
+        
+    
+    
+            var marker_43ccf1629a5a65275ae98df82692c466 = L.marker(
+                [37.64977628, 126.8700862],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_599ab72f5b55f47fcb002dd5a7014474 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_43ccf1629a5a65275ae98df82692c466.setIcon(icon_599ab72f5b55f47fcb002dd5a7014474);
+        
+    
+        var popup_f08f59c073ab9a5e74d843d1f1a7b006 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_be747c2d0de2d96e1d96453071e4060d = $(`<div id="html_be747c2d0de2d96e1d96453071e4060d" style="width: 100.0%; height: 100.0%;"><b>고양시 농업기술센터</b><br>경기 고양시 덕양구 원흥동 471-10</div>`)[0];
+                popup_f08f59c073ab9a5e74d843d1f1a7b006.setContent(html_be747c2d0de2d96e1d96453071e4060d);
+            
+        
+
+        marker_43ccf1629a5a65275ae98df82692c466.bindPopup(popup_f08f59c073ab9a5e74d843d1f1a7b006)
+        ;
+
+        
+    
+    
+            var marker_18fc15cbfc0f8b8c076c2ef1d6b27790 = L.marker(
+                [35.78210871, 128.4468757],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_f582b7d6af1af539d799d7a78df3d5aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_18fc15cbfc0f8b8c076c2ef1d6b27790.setIcon(icon_f582b7d6af1af539d799d7a78df3d5aa);
+        
+    
+        var popup_420a70e9b1562b36618f608528e1bb30 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fb62bf72451fb525f82546109bb33d3a = $(`<div id="html_fb62bf72451fb525f82546109bb33d3a" style="width: 100.0%; height: 100.0%;"><b>달성군 농업기술센터</b><br>대구 달성군 옥포읍 교항리 2521-7</div>`)[0];
+                popup_420a70e9b1562b36618f608528e1bb30.setContent(html_fb62bf72451fb525f82546109bb33d3a);
+            
+        
+
+        marker_18fc15cbfc0f8b8c076c2ef1d6b27790.bindPopup(popup_420a70e9b1562b36618f608528e1bb30)
+        ;
+
+        
+    
+    
+            var marker_1df9eb37250b6a8f17c4c57e071e236e = L.marker(
+                [35.74861057, 128.3539573],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_0ca7e9c911989acf6e58678e661bf884 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1df9eb37250b6a8f17c4c57e071e236e.setIcon(icon_0ca7e9c911989acf6e58678e661bf884);
+        
+    
+        var popup_ec5f947b042df73d0b21a0e8ed7b1f16 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a09682a53cc49cbdac91f36cf3309339 = $(`<div id="html_a09682a53cc49cbdac91f36cf3309339" style="width: 100.0%; height: 100.0%;"><b>고령군농업기술센터 성산분소</b><br>경북 고령군 성산면 기족리 698</div>`)[0];
+                popup_ec5f947b042df73d0b21a0e8ed7b1f16.setContent(html_a09682a53cc49cbdac91f36cf3309339);
+            
+        
+
+        marker_1df9eb37250b6a8f17c4c57e071e236e.bindPopup(popup_ec5f947b042df73d0b21a0e8ed7b1f16)
+        ;
+
+        
+    
+    
+            var marker_ba8c8273b1132c89df0a2b937ee28c28 = L.marker(
+                [37.17290817, 127.2988521],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_40bd84c552336dfa69ec7a9aac305789 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ba8c8273b1132c89df0a2b937ee28c28.setIcon(icon_40bd84c552336dfa69ec7a9aac305789);
+        
+    
+        var popup_4b59d24e8d6fdeee28c24e403900069d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_51de21124611e0214c3c34ec0dd37b8d = $(`<div id="html_51de21124611e0214c3c34ec0dd37b8d" style="width: 100.0%; height: 100.0%;"><b>용인시농업기술센터</b><br>경기 용인시 처인구 원삼면 사암리 858-1</div>`)[0];
+                popup_4b59d24e8d6fdeee28c24e403900069d.setContent(html_51de21124611e0214c3c34ec0dd37b8d);
+            
+        
+
+        marker_ba8c8273b1132c89df0a2b937ee28c28.bindPopup(popup_4b59d24e8d6fdeee28c24e403900069d)
+        ;
+
+        
+    
+    
+            var marker_230358ebbb0cccd127bec0f8f5cc7a19 = L.marker(
+                [37.1665897, 127.3132647],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_b43522dd5c44a48c7af7c7810a9d611d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_230358ebbb0cccd127bec0f8f5cc7a19.setIcon(icon_b43522dd5c44a48c7af7c7810a9d611d);
+        
+    
+        var popup_545c822559fcf2d2a0b1895de27e509e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4f649976543b5b8f01f8f2e6e9ef505b = $(`<div id="html_4f649976543b5b8f01f8f2e6e9ef505b" style="width: 100.0%; height: 100.0%;"><b>용인시농업기술센터 원삼상담소</b><br>경기 용인시 처인구 원삼면 고당리 88-1</div>`)[0];
+                popup_545c822559fcf2d2a0b1895de27e509e.setContent(html_4f649976543b5b8f01f8f2e6e9ef505b);
+            
+        
+
+        marker_230358ebbb0cccd127bec0f8f5cc7a19.bindPopup(popup_545c822559fcf2d2a0b1895de27e509e)
+        ;
+
+        
+    
+    
+            var marker_1d69356e4b33d3f991fb8a4c3955e25f = L.marker(
+                [37.02379423, 127.2866132],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_a030aad1eaf3640be487e667c9d34195 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1d69356e4b33d3f991fb8a4c3955e25f.setIcon(icon_a030aad1eaf3640be487e667c9d34195);
+        
+    
+        var popup_d765205ad4da1a0eb6fba0f8fe77de90 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_afc0982f2b62e5b8613cd2c5483a700b = $(`<div id="html_afc0982f2b62e5b8613cd2c5483a700b" style="width: 100.0%; height: 100.0%;"><b>안성시농업기술센터</b><br>경기 안성시 보개면 불현리 189-2</div>`)[0];
+                popup_d765205ad4da1a0eb6fba0f8fe77de90.setContent(html_afc0982f2b62e5b8613cd2c5483a700b);
+            
+        
+
+        marker_1d69356e4b33d3f991fb8a4c3955e25f.bindPopup(popup_d765205ad4da1a0eb6fba0f8fe77de90)
+        ;
+
+        
+    
+    
+            var marker_da27a94f4cbd86521c45b0a5bcfd73c5 = L.marker(
+                [37.04893179, 127.1998884],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_f6abc905cf60a34e8b717d89cb89b337 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_da27a94f4cbd86521c45b0a5bcfd73c5.setIcon(icon_f6abc905cf60a34e8b717d89cb89b337);
+        
+    
+        var popup_5f929e893189ef37bec668f0e132f693 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c50605c50d0d753df6984d68a7b38d42 = $(`<div id="html_c50605c50d0d753df6984d68a7b38d42" style="width: 100.0%; height: 100.0%;"><b>안성시 농기계임대사업소 서부분소</b><br>경기 안성시 양성면 덕봉리 88-35</div>`)[0];
+                popup_5f929e893189ef37bec668f0e132f693.setContent(html_c50605c50d0d753df6984d68a7b38d42);
+            
+        
+
+        marker_da27a94f4cbd86521c45b0a5bcfd73c5.bindPopup(popup_5f929e893189ef37bec668f0e132f693)
+        ;
+
+        
+    
+    
+            var marker_71e0905ed81ba96aea69b3d2ef6b5b5e = L.marker(
+                [37.08079265, 127.4019946],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_e3b829e7c04e8c5f0b01338f71f165f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_71e0905ed81ba96aea69b3d2ef6b5b5e.setIcon(icon_e3b829e7c04e8c5f0b01338f71f165f4);
+        
+    
+        var popup_53183bd758d05703c9bd48f910adc008 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b922716deb05e2ba125c7f666a9f3daa = $(`<div id="html_b922716deb05e2ba125c7f666a9f3daa" style="width: 100.0%; height: 100.0%;"><b>안성시농업기술센터 농기계임대사업소 동부분소</b><br>경기 안성시 죽산면 두현리 456-6</div>`)[0];
+                popup_53183bd758d05703c9bd48f910adc008.setContent(html_b922716deb05e2ba125c7f666a9f3daa);
+            
+        
+
+        marker_71e0905ed81ba96aea69b3d2ef6b5b5e.bindPopup(popup_53183bd758d05703c9bd48f910adc008)
+        ;
+
+        
+    
+    
+            var marker_b733fcae78e09ddc1b61f94181a7b1b5 = L.marker(
+                [37.30060835, 126.844135],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_61b521c25502e842a87d7655dcf551f5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b733fcae78e09ddc1b61f94181a7b1b5.setIcon(icon_61b521c25502e842a87d7655dcf551f5);
+        
+    
+        var popup_500b1ff9eb2333a34efd769a2041c172 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e76d06d367087b0feb307a1077d604ff = $(`<div id="html_e76d06d367087b0feb307a1077d604ff" style="width: 100.0%; height: 100.0%;"><b>안산시농업기술센터</b><br>경기 안산시 상록구 사동 1584</div>`)[0];
+                popup_500b1ff9eb2333a34efd769a2041c172.setContent(html_e76d06d367087b0feb307a1077d604ff);
+            
+        
+
+        marker_b733fcae78e09ddc1b61f94181a7b1b5.bindPopup(popup_500b1ff9eb2333a34efd769a2041c172)
+        ;
+
+        
+    
+    
+            var marker_79dc8d76e985fe4f41cce6593acae17b = L.marker(
+                [37.24900562, 126.5909673],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_e5aaaf9f2c6814b26d50b32da5bde611 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_79dc8d76e985fe4f41cce6593acae17b.setIcon(icon_e5aaaf9f2c6814b26d50b32da5bde611);
+        
+    
+        var popup_abec6ca2a43b098c05f1b3770db92df1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e6cac1bf1e2783444c0a3ed67919e703 = $(`<div id="html_e6cac1bf1e2783444c0a3ed67919e703" style="width: 100.0%; height: 100.0%;"><b>안산시농업기술센터 대부영농상담소</b><br>경기 안산시 단원구 대부동동 1253-1</div>`)[0];
+                popup_abec6ca2a43b098c05f1b3770db92df1.setContent(html_e6cac1bf1e2783444c0a3ed67919e703);
+            
+        
+
+        marker_79dc8d76e985fe4f41cce6593acae17b.bindPopup(popup_abec6ca2a43b098c05f1b3770db92df1)
+        ;
+
+        
+    
+    
+            var marker_9f2223ee3d70e90c5ae8398be2d4bb0b = L.marker(
+                [36.91387509, 126.6496997],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_901f4bf010b6ee8b24c90ed515afee7d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9f2223ee3d70e90c5ae8398be2d4bb0b.setIcon(icon_901f4bf010b6ee8b24c90ed515afee7d);
+        
+    
+        var popup_36f7d72052b3be1f95d80ddc28ab2056 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_468d042b9006fbdbdc26169d916704c5 = $(`<div id="html_468d042b9006fbdbdc26169d916704c5" style="width: 100.0%; height: 100.0%;"><b>당진시농업기술센터</b><br>충남 당진시 원당동 486</div>`)[0];
+                popup_36f7d72052b3be1f95d80ddc28ab2056.setContent(html_468d042b9006fbdbdc26169d916704c5);
+            
+        
+
+        marker_9f2223ee3d70e90c5ae8398be2d4bb0b.bindPopup(popup_36f7d72052b3be1f95d80ddc28ab2056)
+        ;
+
+        
+    
+    
+            var marker_87dd411bd9c315786c7536b671efd57b = L.marker(
+                [37.00748422, 126.5309383],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_49096363cb3046eaa577082884cb20c7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_87dd411bd9c315786c7536b671efd57b.setIcon(icon_49096363cb3046eaa577082884cb20c7);
+        
+    
+        var popup_045150177b6fcb6a008f2b9b6039d60e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ceed1597ba52f0420038ec102db0b542 = $(`<div id="html_ceed1597ba52f0420038ec102db0b542" style="width: 100.0%; height: 100.0%;"><b>당진시농업기술센터 북부지소</b><br>충남 당진시 석문면 삼봉리 1124-3</div>`)[0];
+                popup_045150177b6fcb6a008f2b9b6039d60e.setContent(html_ceed1597ba52f0420038ec102db0b542);
+            
+        
+
+        marker_87dd411bd9c315786c7536b671efd57b.bindPopup(popup_045150177b6fcb6a008f2b9b6039d60e)
+        ;
+
+        
+    
+    
+            var marker_4fc5d264dca2cb5535743ffeeb45f7ff = L.marker(
+                [36.87480035, 126.755721],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_e731203d8cd3dce9fd75c7d8c9a61e35 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4fc5d264dca2cb5535743ffeeb45f7ff.setIcon(icon_e731203d8cd3dce9fd75c7d8c9a61e35);
+        
+    
+        var popup_f8d5a3b24d1f94639b2380be53d9d9cf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_acb51ae46d15d4342097e59aba28ecb0 = $(`<div id="html_acb51ae46d15d4342097e59aba28ecb0" style="width: 100.0%; height: 100.0%;"><b>당진시농업기술센터 중부농기계임대사업장</b><br>충남 당진시 신평면 상오리 1005</div>`)[0];
+                popup_f8d5a3b24d1f94639b2380be53d9d9cf.setContent(html_acb51ae46d15d4342097e59aba28ecb0);
+            
+        
+
+        marker_4fc5d264dca2cb5535743ffeeb45f7ff.bindPopup(popup_f8d5a3b24d1f94639b2380be53d9d9cf)
+        ;
+
+        
+    
+    
+            var marker_97123944c2973ca9fe811591a087fd04 = L.marker(
+                [35.25261404, 129.1950196],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_7c23648d166f44247b07be051d6fc2da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_97123944c2973ca9fe811591a087fd04.setIcon(icon_7c23648d166f44247b07be051d6fc2da);
+        
+    
+        var popup_1b104b283ebe9d1cab1f6f50dfdf1df5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_176c72f446217a833caa4a036985ae06 = $(`<div id="html_176c72f446217a833caa4a036985ae06" style="width: 100.0%; height: 100.0%;"><b>기장군농업기술센터</b><br>부산 기장군 기장읍 만화리 333-28</div>`)[0];
+                popup_1b104b283ebe9d1cab1f6f50dfdf1df5.setContent(html_176c72f446217a833caa4a036985ae06);
+            
+        
+
+        marker_97123944c2973ca9fe811591a087fd04.bindPopup(popup_1b104b283ebe9d1cab1f6f50dfdf1df5)
+        ;
+
+        
+    
+    
+            var marker_71c64adcf8db30bfd0a03a3a96f9aae1 = L.marker(
+                [35.95771355, 128.5609903],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_f36e733791a093fa941516c70ae74fc8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_71c64adcf8db30bfd0a03a3a96f9aae1.setIcon(icon_f36e733791a093fa941516c70ae74fc8);
+        
+    
+        var popup_58adc6cafb9d064a3ba095c58588ac8f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_88f8c676ada760d12346eafd67ff6352 = $(`<div id="html_88f8c676ada760d12346eafd67ff6352" style="width: 100.0%; height: 100.0%;"><b>경상북도농업기술원</b><br>대구 북구 동호동 189</div>`)[0];
+                popup_58adc6cafb9d064a3ba095c58588ac8f.setContent(html_88f8c676ada760d12346eafd67ff6352);
+            
+        
+
+        marker_71c64adcf8db30bfd0a03a3a96f9aae1.bindPopup(popup_58adc6cafb9d064a3ba095c58588ac8f)
+        ;
+
+        
+    
+    
+            var marker_65078c47853f2e56e595dc4eab21eda3 = L.marker(
+                [35.87990286, 128.660614],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_401093e2872f7cbae1d6d9367dd57244 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_65078c47853f2e56e595dc4eab21eda3.setIcon(icon_401093e2872f7cbae1d6d9367dd57244);
+        
+    
+        var popup_c9afc9f5bff6f7e9501b83babf68494c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_de9281aea866140562b64acf57f68dda = $(`<div id="html_de9281aea866140562b64acf57f68dda" style="width: 100.0%; height: 100.0%;"><b>대구광역시농업기술센터</b><br>대구 동구 방촌동 1050-30</div>`)[0];
+                popup_c9afc9f5bff6f7e9501b83babf68494c.setContent(html_de9281aea866140562b64acf57f68dda);
+            
+        
+
+        marker_65078c47853f2e56e595dc4eab21eda3.bindPopup(popup_c9afc9f5bff6f7e9501b83babf68494c)
+        ;
+
+        
+    
+    
+            var marker_0a083b80a2e67667f66d83aeaf5e653b = L.marker(
+                [36.18135088, 128.5931908],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_affc6c753c8b399c1040d02134851eab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0a083b80a2e67667f66d83aeaf5e653b.setIcon(icon_affc6c753c8b399c1040d02134851eab);
+        
+    
+        var popup_17856add99ea1e24ea1f165005ad48aa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6d558d273c2ae7314552a40a18d0e405 = $(`<div id="html_6d558d273c2ae7314552a40a18d0e405" style="width: 100.0%; height: 100.0%;"><b>군위군농업기술센터</b><br>대구 군위군 효령면 성리 111</div>`)[0];
+                popup_17856add99ea1e24ea1f165005ad48aa.setContent(html_6d558d273c2ae7314552a40a18d0e405);
+            
+        
+
+        marker_0a083b80a2e67667f66d83aeaf5e653b.bindPopup(popup_17856add99ea1e24ea1f165005ad48aa)
+        ;
+
+        
+    
+    
+            var marker_8d54e026d70b4583f996e02cb8522b14 = L.marker(
+                [37.64827543, 127.195716],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_dad3213122323a4d13fb1c0041ad2d90 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8d54e026d70b4583f996e02cb8522b14.setIcon(icon_dad3213122323a4d13fb1c0041ad2d90);
+        
+    
+        var popup_bc37f982ac66c19e39db54df2ae7e5fe = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8faf6e8f76dae5e0f0d31f1b3c8cd505 = $(`<div id="html_8faf6e8f76dae5e0f0d31f1b3c8cd505" style="width: 100.0%; height: 100.0%;"><b>남양주농업기술센터</b><br>경기 남양주시 진건읍 사능리 92-1</div>`)[0];
+                popup_bc37f982ac66c19e39db54df2ae7e5fe.setContent(html_8faf6e8f76dae5e0f0d31f1b3c8cd505);
+            
+        
+
+        marker_8d54e026d70b4583f996e02cb8522b14.bindPopup(popup_bc37f982ac66c19e39db54df2ae7e5fe)
+        ;
+
+        
+    
+    
+            var marker_97ee800f14c574545973d6cda93298d9 = L.marker(
+                [37.81392261, 127.7040107],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_13176c2e7c5dd3aa858e20cdc1871755 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_97ee800f14c574545973d6cda93298d9.setIcon(icon_13176c2e7c5dd3aa858e20cdc1871755);
+        
+    
+        var popup_c16525f71cbb341c7576f1f9798729bd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1e2a4550040046614f7aa8f05c3f9c12 = $(`<div id="html_1e2a4550040046614f7aa8f05c3f9c12" style="width: 100.0%; height: 100.0%;"><b>강원도시농업사회적협동조합</b><br>강원특별자치도 춘천시 신동면 증리 1148</div>`)[0];
+                popup_c16525f71cbb341c7576f1f9798729bd.setContent(html_1e2a4550040046614f7aa8f05c3f9c12);
+            
+        
+
+        marker_97ee800f14c574545973d6cda93298d9.bindPopup(popup_c16525f71cbb341c7576f1f9798729bd)
+        ;
+
+        
+    
+    
+            var marker_81701eb8ac8662de661e5ebdaeb95df4 = L.marker(
+                [37.27268037, 127.4326022],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_0e461b1f13ab5077fb05f63bf951155e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_81701eb8ac8662de661e5ebdaeb95df4.setIcon(icon_0e461b1f13ab5077fb05f63bf951155e);
+        
+    
+        var popup_3ae8c5fd40b2593b8713eb232ce7a48b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_008b2ce8395cfc7c092a2310cea090f0 = $(`<div id="html_008b2ce8395cfc7c092a2310cea090f0" style="width: 100.0%; height: 100.0%;"><b>이천시농업기술센터</b><br>경기 이천시 중리동 386-1</div>`)[0];
+                popup_3ae8c5fd40b2593b8713eb232ce7a48b.setContent(html_008b2ce8395cfc7c092a2310cea090f0);
+            
+        
+
+        marker_81701eb8ac8662de661e5ebdaeb95df4.bindPopup(popup_3ae8c5fd40b2593b8713eb232ce7a48b)
+        ;
+
+        
+    
+    
+            var marker_191c773dc5bb931bbb98bd2490691f13 = L.marker(
+                [37.11808249, 127.612168],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_0165e21eaaf47aee1336fa36faec6bf0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_191c773dc5bb931bbb98bd2490691f13.setIcon(icon_0165e21eaaf47aee1336fa36faec6bf0);
+        
+    
+        var popup_213ab340fa59d2a754b39ef95615e942 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_82708badb879d2c31c33a6329e440afc = $(`<div id="html_82708badb879d2c31c33a6329e440afc" style="width: 100.0%; height: 100.0%;"><b>이천시농업기술센터 연구개발과</b><br>경기 이천시 장호원읍 장호원리 332-4</div>`)[0];
+                popup_213ab340fa59d2a754b39ef95615e942.setContent(html_82708badb879d2c31c33a6329e440afc);
+            
+        
+
+        marker_191c773dc5bb931bbb98bd2490691f13.bindPopup(popup_213ab340fa59d2a754b39ef95615e942)
+        ;
+
+        
+    
+    
+            var marker_840d3b320791e10b688391da3b602be6 = L.marker(
+                [37.17552072, 127.4400424],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_78fa8afc0dfc194d2531b69792486cf3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_840d3b320791e10b688391da3b602be6.setIcon(icon_78fa8afc0dfc194d2531b69792486cf3);
+        
+    
+        var popup_35025b2e4a53882e448ebb4b373c40a4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5221a16abcdbbe3690d8a51dfc897bf6 = $(`<div id="html_5221a16abcdbbe3690d8a51dfc897bf6" style="width: 100.0%; height: 100.0%;"><b>이천시농업기술센터 농기계임대사업 본소</b><br>경기 이천시 모가면 어농리 615-7</div>`)[0];
+                popup_35025b2e4a53882e448ebb4b373c40a4.setContent(html_5221a16abcdbbe3690d8a51dfc897bf6);
+            
+        
+
+        marker_840d3b320791e10b688391da3b602be6.bindPopup(popup_35025b2e4a53882e448ebb4b373c40a4)
+        ;
+
+        
+    
+    
+            var marker_5f657670d19e17167d493bd55eb83c04 = L.marker(
+                [35.12906114, 126.7437745],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_b59308d06f9bdaa849507b902b5498be = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5f657670d19e17167d493bd55eb83c04.setIcon(icon_b59308d06f9bdaa849507b902b5498be);
+        
+    
+        var popup_b6be554a9a0ceaabc1db982d7545e7a4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4a4122678cea9329aea0ac5fc853ac63 = $(`<div id="html_4a4122678cea9329aea0ac5fc853ac63" style="width: 100.0%; height: 100.0%;"><b>광주광역시농업기술센터</b><br>광주 광산구 용곡동 418</div>`)[0];
+                popup_b6be554a9a0ceaabc1db982d7545e7a4.setContent(html_4a4122678cea9329aea0ac5fc853ac63);
+            
+        
+
+        marker_5f657670d19e17167d493bd55eb83c04.bindPopup(popup_b6be554a9a0ceaabc1db982d7545e7a4)
+        ;
+
+        
+    
+    
+            var marker_72a92cfaffdf7be88178f32d7f0ebd57 = L.marker(
+                [35.12890072, 126.7433603],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_8ec040852f00f31bd8d10e91430b1dcf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_72a92cfaffdf7be88178f32d7f0ebd57.setIcon(icon_8ec040852f00f31bd8d10e91430b1dcf);
+        
+    
+        var popup_f9aa0510ccd6a1029128e77d92900176 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_81f100875cc7221d31650a84a0c401bb = $(`<div id="html_81f100875cc7221d31650a84a0c401bb" style="width: 100.0%; height: 100.0%;"><b>광주광역시농업기술센터 스마트농업교육관</b><br>광주 광산구 용곡동 418</div>`)[0];
+                popup_f9aa0510ccd6a1029128e77d92900176.setContent(html_81f100875cc7221d31650a84a0c401bb);
+            
+        
+
+        marker_72a92cfaffdf7be88178f32d7f0ebd57.bindPopup(popup_f9aa0510ccd6a1029128e77d92900176)
+        ;
+
+        
+    
+    
+            var marker_717533c65bb6527522aca8e3da3e7b7a = L.marker(
+                [35.12907979, 126.7438084],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_0aeb9490432fc6d917c2488f580f6909 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_717533c65bb6527522aca8e3da3e7b7a.setIcon(icon_0aeb9490432fc6d917c2488f580f6909);
+        
+    
+        var popup_ef509ff7fd022df4d1e3bb85b23d944b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_656b60ca519feaff4db3108e6db71199 = $(`<div id="html_656b60ca519feaff4db3108e6db71199" style="width: 100.0%; height: 100.0%;"><b>광주광역시농업기술센터 농업지원과</b><br>광주 광산구 용곡동 418</div>`)[0];
+                popup_ef509ff7fd022df4d1e3bb85b23d944b.setContent(html_656b60ca519feaff4db3108e6db71199);
+            
+        
+
+        marker_717533c65bb6527522aca8e3da3e7b7a.bindPopup(popup_ef509ff7fd022df4d1e3bb85b23d944b)
+        ;
+
+        
+    
+    
+            var marker_7ecd3ab6ea51db1750b6f34168b443c2 = L.marker(
+                [36.59242957, 126.6449112],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_4ab2e687cf2dcdb1a972778f9c85a17a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7ecd3ab6ea51db1750b6f34168b443c2.setIcon(icon_4ab2e687cf2dcdb1a972778f9c85a17a);
+        
+    
+        var popup_f2a4a598a13ab3d1ceae2e75e65c5b29 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_dfde21835218f1594100f0deb837994f = $(`<div id="html_dfde21835218f1594100f0deb837994f" style="width: 100.0%; height: 100.0%;"><b>홍성군 농업기술센터</b><br>충남 홍성군 홍성읍 옥암리 420-4</div>`)[0];
+                popup_f2a4a598a13ab3d1ceae2e75e65c5b29.setContent(html_dfde21835218f1594100f0deb837994f);
+            
+        
+
+        marker_7ecd3ab6ea51db1750b6f34168b443c2.bindPopup(popup_f2a4a598a13ab3d1ceae2e75e65c5b29)
+        ;
+
+        
+    
+    
+            var marker_6503b4693f350b27e68b6a410be3bca3 = L.marker(
+                [36.59244757, 126.6449045],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_cfc12152b5fc5377f22fe45c34fe3c5d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6503b4693f350b27e68b6a410be3bca3.setIcon(icon_cfc12152b5fc5377f22fe45c34fe3c5d);
+        
+    
+        var popup_f0bca548b3e1455b7af53ed1cfa12b73 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_022c2d980f3d5a9668f485fed81fb5dc = $(`<div id="html_022c2d980f3d5a9668f485fed81fb5dc" style="width: 100.0%; height: 100.0%;"><b>홍성군 귀농귀촌종합지원센터</b><br>충남 홍성군 홍성읍 옥암리 420-4</div>`)[0];
+                popup_f0bca548b3e1455b7af53ed1cfa12b73.setContent(html_022c2d980f3d5a9668f485fed81fb5dc);
+            
+        
+
+        marker_6503b4693f350b27e68b6a410be3bca3.bindPopup(popup_f0bca548b3e1455b7af53ed1cfa12b73)
+        ;
+
+        
+    
+    
+            var marker_ce391cec3549497da7d5ffef0964af8c = L.marker(
+                [35.87376451, 128.9947709],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_3ecd63e637a6c16ae0cd0d494306f1cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ce391cec3549497da7d5ffef0964af8c.setIcon(icon_3ecd63e637a6c16ae0cd0d494306f1cf);
+        
+    
+        var popup_67bd875bc6e1805dd355501709cad7ff = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bcd72c074b14d4f8840c49b237a3eccd = $(`<div id="html_bcd72c074b14d4f8840c49b237a3eccd" style="width: 100.0%; height: 100.0%;"><b>자연체험학습장</b><br>경북 영천시 북안면 명주리 307-1</div>`)[0];
+                popup_67bd875bc6e1805dd355501709cad7ff.setContent(html_bcd72c074b14d4f8840c49b237a3eccd);
+            
+        
+
+        marker_ce391cec3549497da7d5ffef0964af8c.bindPopup(popup_67bd875bc6e1805dd355501709cad7ff)
+        ;
+
+        
+    
+    
+            var marker_321986a8bbc4b17276973b2d858a2682 = L.marker(
+                [36.77818007, 126.6263012],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_9aa52effbde1622063721bd7577060ec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_321986a8bbc4b17276973b2d858a2682.setIcon(icon_9aa52effbde1622063721bd7577060ec);
+        
+    
+        var popup_12c74d5ad1324fd8ee4bede453bb27eb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_26bfca31cb1fec6e92dde7893a1fd44e = $(`<div id="html_26bfca31cb1fec6e92dde7893a1fd44e" style="width: 100.0%; height: 100.0%;"><b>숲속의아침 자연체험학습장</b><br>충남 서산시 운산면 고산리 478-1</div>`)[0];
+                popup_12c74d5ad1324fd8ee4bede453bb27eb.setContent(html_26bfca31cb1fec6e92dde7893a1fd44e);
+            
+        
+
+        marker_321986a8bbc4b17276973b2d858a2682.bindPopup(popup_12c74d5ad1324fd8ee4bede453bb27eb)
+        ;
+
+        
+    
+    
+            var marker_96a31a14d5b8f63378c9f9ad93f4796c = L.marker(
+                [36.77835276, 127.2194984],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_2c11b7bbe34ebc3443f4f592a4f27153 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_96a31a14d5b8f63378c9f9ad93f4796c.setIcon(icon_2c11b7bbe34ebc3443f4f592a4f27153);
+        
+    
+        var popup_cfa5a574b2e387cc478158351b6e8efb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_47ef6dfb1297685c2057ceed12358f84 = $(`<div id="html_47ef6dfb1297685c2057ceed12358f84" style="width: 100.0%; height: 100.0%;"><b>독립기념관야영장 자연체험학습장</b><br>충남 천안시 동남구 목천읍 신계리 산 9</div>`)[0];
+                popup_cfa5a574b2e387cc478158351b6e8efb.setContent(html_47ef6dfb1297685c2057ceed12358f84);
+            
+        
+
+        marker_96a31a14d5b8f63378c9f9ad93f4796c.bindPopup(popup_cfa5a574b2e387cc478158351b6e8efb)
+        ;
+
+        
+    
+    
+            var marker_707384eb75c92b5249d74e00f7e1a0c1 = L.marker(
+                [35.85072909, 127.0605668],
+                {}
+            ).addTo(map_6a41da494fed0d42c93617a756a82085);
+        
+    
+            var icon_ad16c19bd332f7fba8e79a330a1517ed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_707384eb75c92b5249d74e00f7e1a0c1.setIcon(icon_ad16c19bd332f7fba8e79a330a1517ed);
+        
+    
+        var popup_9f8866052ee57725c9b061ae049aa98a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5fd60b62425d1c1194166b505875e476 = $(`<div id="html_5fd60b62425d1c1194166b505875e476" style="width: 100.0%; height: 100.0%;"><b>전주시농업기술센터</b><br>전북특별자치도 전주시 덕진구 장동 452-32</div>`)[0];
+                popup_9f8866052ee57725c9b061ae049aa98a.setContent(html_5fd60b62425d1c1194166b505875e476);
+            
+        
+
+        marker_707384eb75c92b5249d74e00f7e1a0c1.bindPopup(popup_9f8866052ee57725c9b061ae049aa98a)
+        ;
+
+        
+    
+</script>
+</html>

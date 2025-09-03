@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <link rel="stylesheet" href="../static/css/ui_jk.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <div class="logo-icon"></div>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="/dashboard" class="nav-link">
+                    <span class="nav-icon">🏠</span>
+                    대쉬보드
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/education" class="nav-link">
+                    <span class="nav-icon">🏫</span>
+                    농업교육기관
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/flowershop" class="nav-link">
+                    <span class="nav-icon">🌼</span>
+                    꽃집 지도
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/growplant" class="nav-link">
+                    <span class="nav-icon">
+                        <img src="/static/images/growplant.png" alt="식물 성장 아이콘" style="width:21px; height:21px; vertical-align:middle;">
+                    </span>
+                    식물 성장 예측
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/hurt" class="nav-link">
+                    <span class="nav-icon">🚑</span>
+                     식물 병명 진단
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+<div class="main-content">
+    <div class="header">
+        <h1 class="page-title">전국 꽃집 지도🌼</h1>
+    </div>
+
+    <!-- 로딩 메시지 -->
+    <div id="loading-message" style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 85vh;
+        font-size: 18px;
+        font-weight: bold;
+        color: #4caf50;
+        background: white;
+    ">
+        🌼 전국 꽃집 지도를 불러오는 중입니다...
+    </div>
+
+    <div class="map-container" style="height:85vh; display:none;" id="map-container">
+        <iframe
+            src="./static/iframes/flowershop_map.html"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            id="flowershop-iframe"
+        ></iframe>
+    </div>
+    </div>
+
+<script>
+    const iframe = document.getElementById('flowershop-iframe');
+    const loadingMessage = document.getElementById('loading-message');
+    const mapContainer = document.getElementById('map-container');
+
+    // iframe이 로드되면 실행
+    iframe.onload = function() {
+        loadingMessage.style.display = 'none'; // 로딩 메시지 숨기기
+        mapContainer.style.display = 'block'; // 지도 표시
+    };
+</script>
+
+
+    
+    <!-- 네비게이션 메뉴 -->
+    <script>
+        // 모든 nav-link 요소 선택
+        const navLinks = document.querySelectorAll('.nav-link');
+        // 현재 URL 경로 얻기
+        const currentPath = window.location.pathname;
+
+        navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+
+        // href가 # 이거나 빈 값이면 비교하지 않음
+        if (!href || href === '#') return;
+
+        const linkPath = new URL(href, window.location.origin).pathname;
+
+        if (linkPath === currentPath) {
+            link.classList.add('active');
+        }
+        });
+    </script>
+
+</body>
+</html>
