@@ -28,19 +28,19 @@
 
 ### 2. 농업 교육 기관 지도
 전국 교육기관 위치 시각화 + 주소 검색 기능 (Kakao API 연동)  
-![농업 교육기관 지도](attachment:344a5ab2-814e-4df6-a52c-ec5510c6c696:image.png)
+![농업 교육기관 지도](./images/page2.jpg)
 
 ### 3. 꽃집 지도
 전국 꽃집 클러스터링 + 지역 필터링 & 검색 기능  
-![꽃집 지도](attachment:2affc5c4-dee7-4977-ba1a-114b954af2c6:image.png)
+![꽃집 지도](./images/page3.jpg)
 
 ### 4. 식물 성장 예측
 SVR 모델 기반, 주차별 높이·열매 수 성장 추세 예측  
-![성장 예측](attachment:f302ea62-bc20-42bd-8a5b-d92972af3383:image.png)
+![성장 예측](./images/page4.jpg)
 
 ### 5. 병해충 진단
 CNN 모델로 업로드 이미지의 병해충 여부와 신뢰도를 예측  
-![병해충 진단](attachment:6b08cbbb-1069-4cd7-bdda-1ba697a1b5ad:image.png)
+![병해충 진단](./images/page5.jpg)
 
 ---
 
